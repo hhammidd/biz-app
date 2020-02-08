@@ -1,0 +1,78 @@
+<div class="search-div">
+  <button mat-raised-button (click)="onCreate()">
+    <mat-icon>add</mat-icon>Create
+  </button>
+  <mat-form-field class="search-form-field" >
+    <input (keyup)="applyFilter($event.target.value)"  matInput placeholder="Filter">
+  </mat-form-field>
+</div>
+
+
+<mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+  <!-- Position Column -->
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="sp_id">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Sale point Id </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.sp_id}} </mat-cell>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="field_code">
+    <mat-header-cell *matHeaderCellDef> Field code </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.field_code}} </mat-cell>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef> name </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="geo_id">
+    <mat-header-cell *matHeaderCellDef> geo id </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.geo_id}} </mat-cell>
+  </ng-container>
+
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="cap">
+    <mat-header-cell *matHeaderCellDef> cap </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.cap}} </mat-cell>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="comune">
+    <mat-header-cell *matHeaderCellDef> comune </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.comune}} </mat-cell>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="province">
+    <mat-header-cell *matHeaderCellDef> province </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.province}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="region">
+    <mat-header-cell *matHeaderCellDef> region </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.region}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="tel">
+    <mat-header-cell *matHeaderCellDef> tel </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.tel}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="potential">
+    <mat-header-cell *matHeaderCellDef> potential </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.potential}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="coords">
+    <mat-header-cell *matHeaderCellDef> coords </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.coords}} </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>

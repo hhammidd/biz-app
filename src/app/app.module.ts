@@ -14,6 +14,7 @@ import { SalePointListComponent } from './sale-points/sale-point-list/sale-point
 import {SalePointComponent} from './sale-points/sale-point/sale-point.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MaterialModule} from './material/material.module';
+import {SalePointService} from './shared/sale-point.service';
 
 
 @NgModule({
@@ -24,15 +25,18 @@ import {MaterialModule} from './material/material.module';
     HomeComponent,
     NotFoundComponent,
     SalePointsComponent,
+    SalePointListComponent,
+    SalePointComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
     MaterialModule,
     AppRoutingModule,
     BrowserAnimationsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [SalePointService],
+  bootstrap: [AppComponent],
+  entryComponents: [SalePointComponent]
+
 })
 export class AppModule { }
