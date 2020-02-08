@@ -12,9 +12,11 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { SalePointsComponent } from './sale-points/sale-points.component';
 import { SalePointListComponent } from './sale-points/sale-point-list/sale-point-list.component';
 import {SalePointComponent} from './sale-points/sale-point/sale-point.component';
-import {MatToolbarModule} from '@angular/material/toolbar';
 import {MaterialModule} from './material/material.module';
 import {SalePointService} from './shared/sale-point.service';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { OfferComponent } from './offers/offer/offer.component';
+import { OfferListComponent } from './offers/offer-list/offer-list.component';
 
 
 @NgModule({
@@ -26,13 +28,16 @@ import {SalePointService} from './shared/sale-point.service';
     NotFoundComponent,
     SalePointsComponent,
     SalePointListComponent,
-    SalePointComponent
+    SalePointComponent,
+    OfferComponent,
+    OfferListComponent
   ],
   imports: [
     BrowserModule,
     MaterialModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule
   ],
   providers: [SalePointService],
   bootstrap: [AppComponent],

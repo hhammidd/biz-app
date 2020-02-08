@@ -1,1 +1,66 @@
-<p>sale-point works!</p>
+<form [formGroup]="service.form" class="normal-form" (submit)="onSubmit()">
+  <mat-grid-list cols="2" rowHeight="300px">
+    <mat-grid-tile>
+      <div class="controles-container">
+        <input type="hidden" fromControlName="$key">
+        <mat-form-field>
+          <input formControlName="field_code" matInput placeholder="Field code*">
+          <mat-error>This field is mandatory.</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input formControlName="name" matInput placeholder="Sale point name">
+          <mat-error>Invalid email address.</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input formControlName="geo_id" matInput placeholder="Geo Id">
+        </mat-form-field>
+        <mat-form-field>
+          <input formControlName="cap" matInput placeholder="Cap"><!-- check all possible -->
+        </mat-form-field>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div class="controles-container">
+        <div class="add-bottom-padding">
+          <mat-form-field>
+            <mat-select formControlName="comune" placeholder="comune">
+              <mat-option>None</mat-option>
+              <ng-container *ngFor="let department of comunes">
+                <mat-option value="{{department.id}}">{{department.value}}</mat-option>
+              </ng-container>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <mat-form-field>
+          <mat-select formControlName="province" placeholder="province">
+            <mat-option>None</mat-option>
+            <ng-container *ngFor="let department of provonces">
+              <mat-option value="{{department.id}}">{{department.value}}</mat-option>
+            </ng-container>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-select formControlName="region" placeholder="region">
+            <mat-option>None</mat-option>
+            <ng-container *ngFor="let department of regions">
+              <mat-option value="{{department.id}}">{{department.value}}</mat-option>
+            </ng-container>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <input formControlName="address" matInput placeholder="Address">
+          <mat-error>This field is mandatory.</mat-error>
+        </mat-form-field>
+
+        <div class="button-row">
+          <button mat-raised-button color="primary" type="submit" [disabled]="service.form.invalid">Submit</button>
+          <button mat-raised-button color="warn" (click)="onClear()">Clear</button>
+        </div>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+</form>

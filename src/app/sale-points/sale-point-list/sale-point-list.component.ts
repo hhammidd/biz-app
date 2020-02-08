@@ -7,44 +7,44 @@ import {SalePointComponent} from '../sale-point/sale-point.component';
 
 const ELEMENT_DATA: ISalepoint[] = [
   {
-    sp_id: 1, field_code: '0001',
+    sp_id: '0001', field_code: '0001',
     name: 'M&T', geo_id: '1', cap: '00001', comune: '0001', province: '001',
-    region: '01', tel: '123456776543', potential: 12, coords:'1234567865'
+    region: '01', tel: '123456776543', potential: 12, address:'1234567865'
   },
   {
-    sp_id: 1, field_code: '0001',
+    sp_id: '0002', field_code: '0001',
     name: 'M&T', geo_id: '1', cap: '00001', comune: '0001', province: '001',
-    region: '01', tel: '123456776543', potential: 12, coords:'1234567865'
+    region: '01', tel: '123456776543', potential: 12, address:'1234567865'
   },
   {
-    sp_id: 1, field_code: '0001',
+    sp_id: '0003', field_code: '0001',
     name: 'M&T', geo_id: '1', cap: '00001', comune: '0001', province: '001',
-    region: '01', tel: '123456776543', potential: 12, coords:'1234567865'
+    region: '01', tel: '123456776543', potential: 12, address:'1234567865'
   },
   {
-    sp_id: 1, field_code: '0001',
+    sp_id: '0004', field_code: '0001',
     name: 'M&T', geo_id: '1', cap: '00001', comune: '0001', province: '001',
-    region: '01', tel: '123456776543', potential: 12, coords:'1234567865'
+    region: '01', tel: '123456776543', potential: 12, address:'1234567865'
   },
   {
-    sp_id: 1, field_code: '0001',
+    sp_id: '0001', field_code: '0001',
     name: 'M&T', geo_id: '1', cap: '00001', comune: '0001', province: '001',
-    region: '01', tel: '123456776543', potential: 12, coords:'1234567865'
+    region: '01', tel: '123456776543', potential: 12, address:'1234567865'
   },
   {
-    sp_id: 1, field_code: '0001',
+    sp_id: '0001', field_code: '0001',
     name: 'M&T', geo_id: '1', cap: '00001', comune: '0001', province: '001',
-    region: '01', tel: '123456776543', potential: 12, coords:'1234567865'
+    region: '01', tel: '123456776543', potential: 12, address:'1234567865'
   },
   {
-    sp_id: 1, field_code: '0001',
+    sp_id: '0001', field_code: '0001',
     name: 'M&T', geo_id: '1', cap: '00001', comune: '0001', province: '001',
-    region: '01', tel: '123456776543', potential: 12, coords:'1234567865'
+    region: '01', tel: '123456776543', potential: 12, address:'1234567865'
   },
   {
-    sp_id: 1, field_code: '0001',
+    sp_id: '0001', field_code: '0001',
     name: 'M&T', geo_id: '1', cap: '00001', comune: '0001', province: '001',
-    region: '01', tel: '123456776543', potential: 12, coords:'1234567865'
+    region: '01', tel: '123456776543', potential: 12, address:'1234567865'
   }
   ]
 
@@ -61,7 +61,7 @@ export class SalePointListComponent implements OnInit {
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
   displayedColumns: string[] = [ 'sp_id', 'field_code', 'name', 'geo_id',
-    'cap', 'comune', 'province', 'region', 'tel', 'potential', 'coords'];
+    'cap', 'comune', 'province', 'region', 'tel', 'potential', 'address'];
 
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 

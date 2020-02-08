@@ -1,5 +1,5 @@
 export interface ISalepoint {
-  sp_id: number,
+  sp_id: string,
   field_code: string,
   name: string,
   geo_id: number,
@@ -9,5 +9,5 @@ export interface ISalepoint {
   region: string,
   tel: string,
   potential: number,
-  coords: string
+  address: string
 }

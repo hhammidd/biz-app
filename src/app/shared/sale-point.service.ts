@@ -12,7 +12,7 @@ export class SalePointService {
 
   form: FormGroup = new FormGroup({
     // $key: new FormControl(null),
-    sp_id: new FormControl(0, Validators.required),
+    sp_id: new FormControl('0001', Validators.required),
     field_code: new FormControl('', Validators.email),
     name: new FormControl('', [Validators.required, Validators.minLength(8)]),
     geo_id: new FormControl(0),
@@ -22,13 +22,13 @@ export class SalePointService {
     region: new FormControl(''),
     tel: new FormControl(''),
     potential: new FormControl(''),
-    coords: new FormControl('')
+    address: new FormControl('')
   });
 
   initializeFormGroup() {
     this.form.setValue({
       //$key: null,
-      sp_id: 0,
+      sp_id: '0001',
       field_code: '',
       name: '',
       geo_id: 0,
@@ -38,7 +38,7 @@ export class SalePointService {
       region: '',
       tel: '',
       potential: 0,
-      coords: '',
+      address: '',
     });
   }
 }
