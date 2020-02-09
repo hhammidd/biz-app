@@ -61,6 +61,7 @@ export class SalePointListComponent implements OnInit {
 
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
+  searchKey: string;
 
   displayedColumns: string[] = [ 'sp_id', 'field_code', 'name', 'geo_id',
     'cap', 'comune', 'province', 'region', 'tel', 'potential', 'address', 'actions'];
@@ -70,6 +71,11 @@ export class SalePointListComponent implements OnInit {
   ngOnInit() {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
+  }
+
+  onSearchClear() {
+    this.searchKey = "";
+    this.applyFilter("");
   }
 
   applyFilter(filterValue: string) {
@@ -82,6 +88,15 @@ export class SalePointListComponent implements OnInit {
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
     dialogConfig.width = '60%';
+    this.dialog.open(SalePointComponent, dialogConfig);
+  }
+
+  onEdit(row){
+    //this.service.populateForm(row);
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    dialogConfig.width = "60%";
     this.dialog.open(SalePointComponent, dialogConfig);
   }
 

@@ -20,4 +20,9 @@ export class OfferComponent implements OnInit {
     console.log(this.service.form.value);
   }
 
+  onClose() {
+    //this.service.form.reset();
+    this.service.initializeFormGroup();
+    this.dialogRef.close();
+  }
 }

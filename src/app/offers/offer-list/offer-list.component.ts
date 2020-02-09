@@ -3,6 +3,7 @@ import {IOffer} from '../../shared/offer/offer';
 import {MatDialog, MatDialogConfig, MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 import {OfferService} from '../../shared/offer/offer.service';
 import {OfferComponent} from '../offer/offer.component';
+import {SalePointComponent} from '../../sale-points/sale-point/sale-point.component';
 
 const ELEMENT_DATA: IOffer[] = [
   {
@@ -60,4 +61,12 @@ export class OfferListComponent implements OnInit {
     this.dialog.open(OfferComponent, dialogConfig);
   }
 
+  onEdit(row){
+    //this.service.populateForm(row);
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    dialogConfig.width = "60%";
+    this.dialog.open(OfferComponent, dialogConfig);
+  }
 }

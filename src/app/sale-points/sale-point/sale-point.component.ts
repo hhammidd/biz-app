@@ -34,4 +34,9 @@ export class SalePointComponent implements OnInit {
     console.log(this.service.form.value);
   }
 
+  onClose() {
+    //this.service.form.reset();
+    this.service.initializeFormGroup();
+    this.dialogRef.close();
+  }
 }
