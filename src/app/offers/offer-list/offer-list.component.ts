@@ -3,7 +3,6 @@ import {IOffer} from '../../shared/offer/offer';
 import {MatDialog, MatDialogConfig, MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 import {OfferService} from '../../shared/offer/offer.service';
 import {OfferComponent} from '../offer/offer.component';
-import {SalePointComponent} from '../../sale-points/sale-point/sale-point.component';
 
 const ELEMENT_DATA: IOffer[] = [
   {
@@ -33,6 +32,7 @@ export class OfferListComponent implements OnInit {
   constructor(private service: OfferService,
               private dialog: MatDialog) {
   }
+
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
@@ -40,7 +40,7 @@ export class OfferListComponent implements OnInit {
 
   displayedColumns: string[] = ['offer_id', 'product_id', 'title', 'desc', 'condition', 'price_normal',
     'price_discount', 'discount', 'supplier', 'startDate', 'endDate', 'url_link', 'url_video', 'activate'
-  , 'actions'];
+    , 'actions'];
 
 
   ngOnInit() {
@@ -61,12 +61,12 @@ export class OfferListComponent implements OnInit {
     this.dialog.open(OfferComponent, dialogConfig);
   }
 
-  onEdit(row){
+  onEdit(row) {
     //this.service.populateForm(row);
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
-    dialogConfig.width = "60%";
+    dialogConfig.width = '60%';
     this.dialog.open(OfferComponent, dialogConfig);
   }
 }

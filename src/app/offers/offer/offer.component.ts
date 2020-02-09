@@ -15,7 +15,6 @@ export class OfferComponent implements OnInit {
   ngOnInit() {
   }
 
-
   onSubmit() {
     console.log(this.service.form.value);
   }
