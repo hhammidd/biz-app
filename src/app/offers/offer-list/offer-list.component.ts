@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {IOffer} from '../../shared/offer/offer';
-import {MatDialog, MatDialogConfig, MatTableDataSource} from '@angular/material';
+import {MatDialog, MatDialogConfig, MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 import {OfferService} from '../../shared/offer/offer.service';
 import {OfferComponent} from '../offer/offer.component';
 
@@ -32,6 +32,8 @@ export class OfferListComponent implements OnInit {
   constructor(private service: OfferService,
               private dialog: MatDialog) {
   }
+  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatPaginator) paginator: MatPaginator;
 
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
@@ -39,9 +41,14 @@ export class OfferListComponent implements OnInit {
     'price_discount', 'discount', 'supplier', 'startDate', 'endDate', 'url_link', 'url_video', 'activate'
   , 'actions'];
 
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
 
   ngOnInit() {
+    this.dataSource.sort = this.sort;
+    this.dataSource.paginator = this.paginator;
+  }
+
+  applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
   onCreate() {
