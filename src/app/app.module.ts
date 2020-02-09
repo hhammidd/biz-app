@@ -17,6 +17,8 @@ import {SalePointService} from './shared/sale-point.service';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { OfferComponent } from './offers/offer/offer.component';
 import { OfferListComponent } from './offers/offer-list/offer-list.component';
+import { OffersComponent } from './offers/offers.component';
+import {OfferService} from './shared/offer/offer.service';
 
 
 @NgModule({
@@ -30,7 +32,8 @@ import { OfferListComponent } from './offers/offer-list/offer-list.component';
     SalePointListComponent,
     SalePointComponent,
     OfferComponent,
-    OfferListComponent
+    OfferListComponent,
+    OffersComponent
   ],
   imports: [
     BrowserModule,
@@ -39,9 +42,9 @@ import { OfferListComponent } from './offers/offer-list/offer-list.component';
     BrowserAnimationsModule,
     ReactiveFormsModule
   ],
-  providers: [SalePointService],
+  providers: [SalePointService, OfferService],
   bootstrap: [AppComponent],
-  entryComponents: [SalePointComponent]
+  entryComponents: [SalePointComponent, OfferComponent]
 
 })
 export class AppModule { }
