@@ -24,6 +24,12 @@ import {UsersComponent} from './users/users.component';
 import {UserComponent} from './users/user/user.component';
 import {UserListComponent} from './users/user-list/user-list.component';
 import {UserService} from './shared/user/user.service';
+import { RolesComponent } from './roles/roles.component';
+import { RoleComponent } from './roles/role/role.component';
+import { RoleListComponent } from './roles/role-list/role-list.component';
+import {RoleService} from './shared/role/role.service';
+import { UsermanagementsComponent } from './usermanagements/usermanagements.component';
+import { PermissionsComponent } from './usermanagements/permissions/permissions.component';
 
 
 
@@ -43,7 +49,12 @@ import {UserService} from './shared/user/user.service';
     OffersComponent,
     UsersComponent,
     UserComponent,
-    UserListComponent
+    UserListComponent,
+    RolesComponent,
+    RoleComponent,
+    RoleListComponent,
+    UsermanagementsComponent,
+    PermissionsComponent
   ],
   imports: [
     BrowserModule,
@@ -52,9 +63,11 @@ import {UserService} from './shared/user/user.service';
     BrowserAnimationsModule,
     ReactiveFormsModule
   ],
-  providers: [SalePointService, OfferService, UserService],
+  providers: [SalePointService, OfferService, UserService,
+  RoleService],
   bootstrap: [AppComponent],
-  entryComponents: [SalePointComponent, OfferComponent, UserComponent]
+  entryComponents: [SalePointComponent, OfferComponent, UserComponent,
+  RoleComponent]
 
 })
 export class AppModule {
