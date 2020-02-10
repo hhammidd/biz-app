@@ -1,0 +1,22 @@
+<mat-toolbar>
+  <span></span>
+  <span class="fill-remaining-space"></span>
+  <button class="btn-dialog-close" mat-stroked-button (click)="onClose()" tabIndex="-1"><mat-icon>clear</mat-icon></button>
+</mat-toolbar>
+
+<form [formGroup]="service.form" class="normal-form" (submit)="onSubmit()">
+  <mat-grid-list cols="2" rowHeight="500px">
+    <mat-grid-tile>
+      <div class="controles-container">
+        <input type="hidden" fromControlName="permission_id">
+        <mat-form-field>
+          <input formControlName="permission_name" matInput placeholder="Permission name">
+        </mat-form-field>
+        <mat-form-field>
+          <input formControlName="description" matInput placeholder="Description">
+        </mat-form-field>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+</form>

@@ -7,32 +7,23 @@
   </mat-form-field>
 </div>
 
-
 <mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
 
-  <ng-container matColumnDef="product_id">
-    <mat-header-cell *matHeaderCellDef mat-sort-header> product_id id </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.product_id}} </mat-cell>
+  <ng-container matColumnDef="permission_id">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Permission Id </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.permission_id}} </mat-cell>
   </ng-container>
-  <ng-container matColumnDef="product_name">
-    <mat-header-cell *matHeaderCellDef mat-sort-header>product_name name</mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.product_name}} </mat-cell>
+
+  <ng-container matColumnDef="permission_name">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> permission Name </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.permission_name}} </mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="description">
-    <mat-header-cell *matHeaderCellDef> description id </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef> Description </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{element.description}} </mat-cell>
   </ng-container>
 
-  <ng-container matColumnDef="supplier_id">
-    <mat-header-cell *matHeaderCellDef> supplier_id id </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.supplier_id}} </mat-cell>
-  </ng-container>
-
-  <ng-container matColumnDef="unit_in_stock">
-    <mat-header-cell *matHeaderCellDef> unit_in_stock id </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.unit_in_stock}} </mat-cell>
-  </ng-container>
 
   <ng-container matColumnDef="actions">
     <mat-header-cell *matHeaderCellDef></mat-header-cell>

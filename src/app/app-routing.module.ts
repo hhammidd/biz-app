@@ -7,6 +7,8 @@ import {OffersComponent} from './offers/offers.component';
 import {UsersComponent} from './users/users.component';
 import {RolesComponent} from './roles/roles.component';
 import {UsermanagementsComponent} from './usermanagements/usermanagements.component';
+import {PermissionsComponent} from './usermanagements/permissions/permissions.component';
+import {ProductsComponent} from './products/products.component';
 
 
 const routes: Routes = [
@@ -15,11 +17,14 @@ const routes: Routes = [
   {path: 'offer', component: OffersComponent},
   {path: 'user', component: UsersComponent},
   {path: 'role', component: RolesComponent},
+  {path: 'permission', component: PermissionsComponent},
+  {path: 'product', component: ProductsComponent},
   {path: 'usermanagement', component: UsermanagementsComponent,
     children: [
       {path: 'role', component: RolesComponent},
       {path: 'user', component: UsersComponent},
-      {path: '**', redirectTo: '/404'}
+      {path: 'permission', component: PermissionsComponent},
+      {path: '**', redirectTo: '/usermanagement', pathMatch: 'full'}
     ]
   },
   {path: '404', component: NotFoundComponent},
@@ -40,5 +45,7 @@ export const routingComponents = [
   OffersComponent,
   UsersComponent,
   RolesComponent,
-  UsermanagementsComponent
+  UsermanagementsComponent,
+  PermissionsComponent,
+  ProductsComponent
 ];

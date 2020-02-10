@@ -29,7 +29,16 @@ import { RoleComponent } from './roles/role/role.component';
 import { RoleListComponent } from './roles/role-list/role-list.component';
 import {RoleService} from './shared/role/role.service';
 import { UsermanagementsComponent } from './usermanagements/usermanagements.component';
+
 import { PermissionsComponent } from './usermanagements/permissions/permissions.component';
+import { PermissionComponent } from './usermanagements/permissions/permission/permission.component';
+import { PermissionListComponent } from './usermanagements/permissions/permission-list/permission-list.component';
+import {PermissionService} from './shared/permission/permission.service';
+
+import { ProductsComponent } from './products/products.component';
+import { ProductComponent } from './products/product/product.component';
+import { ProductListComponent } from './products/product-list/product-list.component';
+import {ProductService} from './shared/product/product.service';
 
 
 
@@ -54,7 +63,12 @@ import { PermissionsComponent } from './usermanagements/permissions/permissions.
     RoleComponent,
     RoleListComponent,
     UsermanagementsComponent,
-    PermissionsComponent
+    PermissionsComponent,
+    PermissionComponent,
+    PermissionListComponent,
+    ProductsComponent,
+    ProductComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,
@@ -64,10 +78,10 @@ import { PermissionsComponent } from './usermanagements/permissions/permissions.
     ReactiveFormsModule
   ],
   providers: [SalePointService, OfferService, UserService,
-  RoleService],
+  RoleService, PermissionService, ProductService],
   bootstrap: [AppComponent],
   entryComponents: [SalePointComponent, OfferComponent, UserComponent,
-  RoleComponent]
+  RoleComponent, PermissionComponent, ProductComponent]
 
 })
 export class AppModule {

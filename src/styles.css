@@ -131,3 +131,7 @@ mat-footer-row mat-footer-cell{
   height: 40px;
   padding: 0px !important;
 }
+
+button {
+  margin-right: 3rem ;
+}
