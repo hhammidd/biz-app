@@ -9,18 +9,23 @@ export class RoleService {
   constructor() { }
 
   form: FormGroup = new FormGroup({
-    // $key: new FormControl(null),
-    role_id: new FormControl(0, Validators.required),
-    role_name: new FormControl('', Validators.email),
-    company_id: new FormControl(0),
+    // $key: new FormControl(null),product_id', 'product_name', 'description', 'supplier_id', 'unit_in_stock
+
+    product_id: new FormControl(0, Validators.required),
+    product_name: new FormControl(''),
+    description: new FormControl(''),
+    supplier_id: new FormControl(0),
+    unit_in_stock: new FormControl(0),
   });
 
   initializeFormGroup() {
     this.form.setValue({
       //$key: null,
-      role_id: 1,
-      role_name:'',
-      company_id: 0,
+      product_id: 1,
+      product_name: '',
+      description: '',
+      supplier_id: 1,
+      unit_in_stock: 1
     });
   }
 }

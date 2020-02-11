@@ -9,6 +9,11 @@ import {RolesComponent} from './roles/roles.component';
 import {UsermanagementsComponent} from './usermanagements/usermanagements.component';
 import {PermissionsComponent} from './usermanagements/permissions/permissions.component';
 import {ProductsComponent} from './products/products.component';
+import {StudiesComponent} from './studies/studies.component';
+import {BrandsComponent} from './studies/brands/brands.component';
+import {ServicesComponent} from './studies/services/services.component';
+import {PotentialsComponent} from './studies/potentials/potentials.component';
+import {ParametersComponent} from './studies/parameters/parameters.component';
 
 
 const routes: Routes = [
@@ -19,6 +24,18 @@ const routes: Routes = [
   {path: 'role', component: RolesComponent},
   {path: 'permission', component: PermissionsComponent},
   {path: 'product', component: ProductsComponent},
+  {path: 'brand', component: BrandsComponent},
+  {path: 'service', component: ServicesComponent},
+  {path: 'potential', component: PotentialsComponent},
+  {path: 'parameter', component: ParametersComponent},
+  {path: 'studies', component: StudiesComponent,
+   children: [
+     {path: 'brand', component: BrandsComponent},//Not working child
+     {path: 'service', component: ServicesComponent},
+     {path: 'potential', component: PotentialsComponent},
+     {path: 'parameter', component: ParametersComponent},
+
+   ]},
   {path: 'usermanagement', component: UsermanagementsComponent,
     children: [
       {path: 'role', component: RolesComponent},
@@ -47,5 +64,6 @@ export const routingComponents = [
   RolesComponent,
   UsermanagementsComponent,
   PermissionsComponent,
-  ProductsComponent
+  ProductsComponent,
+  StudiesComponent
 ];
