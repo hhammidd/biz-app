@@ -40,22 +40,27 @@ import { ProductComponent } from './products/product/product.component';
 import { ProductListComponent } from './products/product-list/product-list.component';
 import {ProductService} from './shared/product/product.service';
 import { StudiesComponent } from './studies/studies.component';
-import { PotentialComponent } from './studies/potentials/potential/potential.component';
-import { PotentialListComponent } from './studies/potentials/potential-list/potential-list.component';
-import { BrandComponent } from './studies/brands/brand/brand.component';
-import { BrandListComponent } from './studies/brands/brand-list/brand-list.component';
-import { ParameterComponent } from './studies/parameters/parameter/parameter.component';
-import { ParameterListComponent } from './studies/parameters/parameter-list/parameter-list.component';
-import { ServiceComponent } from './studies/services/service/service.component';
-import { ServiceListComponent } from './studies/services/service-list/service-list.component';
-import {BrandService} from './shared/studies/brand/brand.service';
-import {ServiceService} from './shared/studies/service/service.service';
-import {PotentialService} from './shared/studies/potential/potential.service';
-import {ParameterService} from './shared/studies/parameter/parameter.service';
+
 import {PotentialsComponent} from './studies/potentials/potentials.component';
 import {BrandsComponent} from './studies/brands/brands.component';
 import {ParametersComponent} from './studies/parameters/parameters.component';
 import {ServicesComponent} from './studies/services/services.component';
+import { BrandQuestionComponent } from './studies/brands/brand-questions/brand-question/brand-question.component';
+import { BrandQuestionListComponent } from './studies/brands/brand-questions/brand-question-list/brand-question-list.component';
+import {BrandQuestionsComponent} from './studies/brands/brand-questions/brand-questions.component';
+import {BrandQuestionService} from './shared/studies/brand/brand-question.service';
+import { BrandAnswersComponent } from './studies/brands/brand-answers/brand-answers.component';
+import { BrandAnswerComponent } from './studies/brands/brand-answers/brand-answer/brand-answer.component';
+import { BrandAnswerListComponent } from './studies/brands/brand-answers/brand-answer-list/brand-answer-list.component';
+import { ParameterQuestionsComponent } from './studies/parameters/parameter-questions/parameter-questions.component';
+import { ParameterAnswersComponent } from './studies/parameters/parameter-answers/parameter-answers.component';
+import { ParameterAnswerComponent } from './studies/parameters/parameter-answers/parameter-answer/parameter-answer.component';
+import { ParameterAnswerListComponent } from './studies/parameters/parameter-answers/parameter-answer-list/parameter-answer-list.component';
+import { ParameterQuestionComponent } from './studies/parameters/parameter-questions/parameter-question/parameter-question.component';
+import { ParameterQuestionListComponent } from './studies/parameters/parameter-questions/parameter-question-list/parameter-question-list.component';
+import {BrandAnswerService} from './shared/studies/brand/brand-answer.service';
+import {ParameterQuestionService} from './shared/studies/parameter/parameter-question.service';
+import {ParameterAnswerService} from './shared/studies/parameter/parameter-answer.service';
 
 
 @NgModule({
@@ -90,20 +95,28 @@ import {ServicesComponent} from './studies/services/services.component';
     StudiesComponent,
 
     PotentialsComponent,
-    PotentialComponent,
-    PotentialListComponent,
+
 
     BrandsComponent,
-    BrandComponent,
-    BrandListComponent,
 
     ParametersComponent,
-    ParameterComponent,
-    ParameterListComponent,
 
     ServicesComponent,
-    ServiceComponent,
-    ServiceListComponent,
+
+    BrandQuestionsComponent,
+    BrandQuestionComponent,
+    BrandQuestionListComponent,
+    BrandAnswersComponent,
+    BrandAnswerComponent,
+    BrandAnswerListComponent,
+
+    ParameterQuestionsComponent,
+    ParameterAnswersComponent,
+    ParameterAnswerComponent,
+    ParameterAnswerListComponent,
+    ParameterQuestionComponent,
+    ParameterQuestionListComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -114,13 +127,14 @@ import {ServicesComponent} from './studies/services/services.component';
   ],
   providers: [SalePointService, OfferService, UserService,
   RoleService, PermissionService, ProductService,
-  BrandService, ServiceService, PotentialService, ParameterService],
+  BrandQuestionService, BrandAnswerService,
+  ParameterQuestionService, ParameterAnswerService],
 
   bootstrap: [AppComponent],
   entryComponents: [SalePointComponent, OfferComponent, UserComponent,
   RoleComponent, PermissionComponent, ProductComponent,
-  BrandComponent, ServiceComponent, PotentialComponent, ParameterComponent]
-
+    BrandQuestionComponent, BrandAnswerComponent,
+  ParameterQuestionComponent, ParameterAnswerComponent]
 })
 export class AppModule {
 }

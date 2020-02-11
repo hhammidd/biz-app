@@ -14,6 +14,10 @@ import {BrandsComponent} from './studies/brands/brands.component';
 import {ServicesComponent} from './studies/services/services.component';
 import {PotentialsComponent} from './studies/potentials/potentials.component';
 import {ParametersComponent} from './studies/parameters/parameters.component';
+import {BrandQuestionsComponent} from './studies/brands/brand-questions/brand-questions.component';
+import {BrandAnswersComponent} from './studies/brands/brand-answers/brand-answers.component';
+import {ParameterQuestionsComponent} from './studies/parameters/parameter-questions/parameter-questions.component';
+import {ParameterAnswersComponent} from './studies/parameters/parameter-answers/parameter-answers.component';
 
 
 const routes: Routes = [
@@ -28,6 +32,11 @@ const routes: Routes = [
   {path: 'service', component: ServicesComponent},
   {path: 'potential', component: PotentialsComponent},
   {path: 'parameter', component: ParametersComponent},
+  {path: 'brand-question', component: BrandQuestionsComponent},
+  {path: 'brand-answer', component: BrandAnswersComponent},
+
+  {path: 'parameter-question', component: ParameterQuestionsComponent},
+  {path: 'parameter-answer', component: ParameterAnswersComponent},
   {path: 'studies', component: StudiesComponent,
    children: [
      {path: 'brand', component: BrandsComponent},//Not working child
