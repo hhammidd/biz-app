@@ -18,6 +18,8 @@ import {BrandQuestionsComponent} from './studies/brands/brand-questions/brand-qu
 import {BrandAnswersComponent} from './studies/brands/brand-answers/brand-answers.component';
 import {ParameterQuestionsComponent} from './studies/parameters/parameter-questions/parameter-questions.component';
 import {ParameterAnswersComponent} from './studies/parameters/parameter-answers/parameter-answers.component';
+import {MapComponent} from './map/map.component';
+import {NationsComponent} from './map/nations/nations.component';
 
 
 const routes: Routes = [
@@ -37,6 +39,8 @@ const routes: Routes = [
 
   {path: 'parameter-question', component: ParameterQuestionsComponent},
   {path: 'parameter-answer', component: ParameterAnswersComponent},
+  {path: 'map', component: MapComponent},
+  {path: 'nation', component: NationsComponent},
   {path: 'studies', component: StudiesComponent,
    children: [
      {path: 'brand', component: BrandsComponent},//Not working child
@@ -74,5 +78,6 @@ export const routingComponents = [
   UsermanagementsComponent,
   PermissionsComponent,
   ProductsComponent,
-  StudiesComponent
+  StudiesComponent,
+  MapComponent,
 ];

@@ -5,13 +5,12 @@ import {UserService} from '../../shared/user/user.service';
 import {UserComponent} from '../user/user.component';
 
 const ELEMENT_DATA: IUser[] = [
-  {id_utente: 1, nome_utente: 'hamid', company_id: 1, role_id: 1},
-  {id_utente: 2, nome_utente: 'hamid1', company_id: 1, role_id: 1},
-  {id_utente: 3, nome_utente: 'hamid2', company_id: 1, role_id: 1},
-  {id_utente: 4, nome_utente: 'hamid3', company_id: 1, role_id: 1},
-  {id_utente: 5, nome_utente: 'hamid4', company_id: 1, role_id: 1},
-  {id_utente: 6, nome_utente: 'hamid5', company_id: 1, role_id: 1},
-  {id_utente: 7, nome_utente: 'hamid6', company_id: 1, role_id: 1},
+  {id_utente: 1, nome_utente: 'hamid', pwd: 'yes' ,company_id: 1, role_id: 1},
+{id_utente: 1, nome_utente: 'hamid', pwd: 'yes' ,company_id: 1, role_id: 1},
+{id_utente: 1, nome_utente: 'hamid', pwd: 'yes' ,company_id: 1, role_id: 1},
+{id_utente: 1, nome_utente: 'hamid', pwd: 'yes' ,company_id: 1, role_id: 1},
+{id_utente: 1, nome_utente: 'hamid', pwd: 'yes' ,company_id: 1, role_id: 1},
+{id_utente: 1, nome_utente: 'hamid', pwd: 'yes' ,company_id: 1, role_id: 1}
 ];
 
 @Component({
@@ -25,8 +24,8 @@ export class UserListComponent implements OnInit {
               private dialog: MatDialog) {
   }
 
-  @ViewChild(MatSort) sort: MatSort;
-  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort, {static: false}) sort: MatSort;
+  @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
 
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 

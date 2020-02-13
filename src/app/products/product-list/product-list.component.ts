@@ -22,8 +22,8 @@ export class ProductListComponent implements OnInit {
               private dialog: MatDialog) {
   }
 
-  @ViewChild(MatSort) sort: MatSort;
-  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort, {static: false}) sort: MatSort;
+  @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
 
   dataSource = new MatTableDataSource(ELEMENT_DATA);
   displayedColumns: string[] = ['product_id', 'product_name', 'description', 'supplier_id', 'unit_in_stock', 'actions'];

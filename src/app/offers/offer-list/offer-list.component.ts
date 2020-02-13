@@ -4,19 +4,16 @@ import {MatDialog, MatDialogConfig, MatPaginator, MatSort, MatTableDataSource} f
 import {OfferService} from '../../shared/offer/offer.service';
 import {OfferComponent} from '../offer/offer.component';
 
+
 const ELEMENT_DATA: IOffer[] = [
+
   {
-    offer_id: '2020FAR0001', product_id: '000001', title: 'kit kat', desc: 'the las call', condition: 'second hand', price_normal: 10,
+    offer_id: '2020FAR0001', title: 'kit kat', desc: 'the las call', condition: 'second hand', price_normal: 10,
     price_discount: 10, discount: 9, supplier: '01', startDate: '2020-12-01T12:00:00',
     endDate: '2020-12-01T12:00:00', url_link: '1234567865', url_video: '12', activate: 0
   },
   {
-    offer_id: '2020FAR0001', product_id: '000002', title: 'hello man', desc: 'this is nice', condition: 'new', price_normal: 10,
-    price_discount: 10, discount: 9, supplier: '01', startDate: '2020-12-01T12:00:00',
-    endDate: '2020-12-01T12:00:00', url_link: '1234567865', url_video: '12', activate: 0
-  },
-  {
-    offer_id: '2020FAR0001', product_id: '000003', title: 'hgghh', desc: 'M&T', condition: 'not bad', price_normal: 10,
+    offer_id: '2020FAR0001', title: 'hello man', desc: 'this is nice', condition: 'new', price_normal: 10,
     price_discount: 10, discount: 9, supplier: '01', startDate: '2020-12-01T12:00:00',
     endDate: '2020-12-01T12:00:00', url_link: '1234567865', url_video: '12', activate: 0
   }
@@ -32,9 +29,8 @@ export class OfferListComponent implements OnInit {
   constructor(private service: OfferService,
               private dialog: MatDialog) {
   }
-
-  @ViewChild(MatSort) sort: MatSort;
-  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort, {static: false}) sort: MatSort;
+  @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
 
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 

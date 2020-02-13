@@ -24,8 +24,8 @@ export class BrandAnswerListComponent implements OnInit {
               private dialog: MatDialog) {
   }
 
-  @ViewChild(MatSort) sort: MatSort;
-  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort, {static: false}) sort: MatSort;
+  @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
 
   dataSource = new MatTableDataSource(ELEMENT_DATA);
   displayedColumns: string[] = ['brand_ans_id', 'title', 'ins_data', 'upd_data', 'actions'];

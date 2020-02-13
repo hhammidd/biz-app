@@ -61,6 +61,11 @@ import { ParameterQuestionListComponent } from './studies/parameters/parameter-q
 import {BrandAnswerService} from './shared/studies/brand/brand-answer.service';
 import {ParameterQuestionService} from './shared/studies/parameter/parameter-question.service';
 import {ParameterAnswerService} from './shared/studies/parameter/parameter-answer.service';
+import { MapComponent } from './map/map.component';
+import { NationsComponent } from './map/nations/nations.component';
+import { NationComponent } from './map/nations/nation/nation.component';
+import { NationListComponent } from './map/nations/nation-list/nation-list.component';
+import {NationService} from './shared/map/nation.service';
 
 
 @NgModule({
@@ -116,6 +121,11 @@ import {ParameterAnswerService} from './shared/studies/parameter/parameter-answe
     ParameterAnswerListComponent,
     ParameterQuestionComponent,
     ParameterQuestionListComponent,
+    MapComponent,
+
+    NationsComponent,
+    NationComponent,
+    NationListComponent,
 
   ],
   imports: [
@@ -128,13 +138,15 @@ import {ParameterAnswerService} from './shared/studies/parameter/parameter-answe
   providers: [SalePointService, OfferService, UserService,
   RoleService, PermissionService, ProductService,
   BrandQuestionService, BrandAnswerService,
-  ParameterQuestionService, ParameterAnswerService],
+  ParameterQuestionService, ParameterAnswerService,
+  NationService],
 
   bootstrap: [AppComponent],
   entryComponents: [SalePointComponent, OfferComponent, UserComponent,
   RoleComponent, PermissionComponent, ProductComponent,
     BrandQuestionComponent, BrandAnswerComponent,
-  ParameterQuestionComponent, ParameterAnswerComponent]
+  ParameterQuestionComponent, ParameterAnswerComponent,
+  NationComponent]
 })
 export class AppModule {
 }
