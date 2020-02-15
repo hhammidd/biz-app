@@ -20,6 +20,11 @@ import {ParameterQuestionsComponent} from './studies/parameters/parameter-questi
 import {ParameterAnswersComponent} from './studies/parameters/parameter-answers/parameter-answers.component';
 import {MapComponent} from './map/map.component';
 import {NationsComponent} from './map/nations/nations.component';
+import {RegionsComponent} from './map/regions/regions.component';
+import {ProvincesComponent} from './map/provinces/provinces.component';
+import {ComuniComponent} from './map/comuni/comuni.component';
+import {CapsComponent} from './map/caps/caps.component';
+import {BrandMicrosComponent} from './studies/brands/brand-micros/brand-micros.component';
 
 
 const routes: Routes = [
@@ -34,22 +39,32 @@ const routes: Routes = [
   {path: 'service', component: ServicesComponent},
   {path: 'potential', component: PotentialsComponent},
   {path: 'parameter', component: ParametersComponent},
+
   {path: 'brand-question', component: BrandQuestionsComponent},
   {path: 'brand-answer', component: BrandAnswersComponent},
+  {path: 'brand-micro', component: BrandMicrosComponent},
 
   {path: 'parameter-question', component: ParameterQuestionsComponent},
   {path: 'parameter-answer', component: ParameterAnswersComponent},
+
   {path: 'map', component: MapComponent},
   {path: 'nation', component: NationsComponent},
-  {path: 'studies', component: StudiesComponent,
-   children: [
-     {path: 'brand', component: BrandsComponent},//Not working child
-     {path: 'service', component: ServicesComponent},
-     {path: 'potential', component: PotentialsComponent},
-     {path: 'parameter', component: ParametersComponent},
+  {path: 'region', component: RegionsComponent},
+  {path: 'province', component: ProvincesComponent},
+  {path: 'comune', component: ComuniComponent},
+  {path: 'cap', component: CapsComponent},
+  {
+    path: 'studies', component: StudiesComponent,
+    children: [
+      {path: 'brand', component: BrandsComponent},//Not working child
+      {path: 'service', component: ServicesComponent},
+      {path: 'potential', component: PotentialsComponent},
+      {path: 'parameter', component: ParametersComponent},
 
-   ]},
-  {path: 'usermanagement', component: UsermanagementsComponent,
+    ]
+  },
+  {
+    path: 'usermanagement', component: UsermanagementsComponent,
     children: [
       {path: 'role', component: RolesComponent},
       {path: 'user', component: UsersComponent},

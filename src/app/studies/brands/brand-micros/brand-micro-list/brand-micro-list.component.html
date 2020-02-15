@@ -1,0 +1,67 @@
+<div class="search-div">
+  <button mat-raised-button (click)="onCreate()">
+    <mat-icon>add</mat-icon>
+    Create
+  </button>
+  <mat-form-field class="search-form-field" floatLabel="never">
+    <input (keyup)="applyFilter($event.target.value)" placeholder="Search" autocomplete="off" matInput
+           placeholder="Filter">
+  </mat-form-field>
+</div>
+<mat-toolbar>
+  <span>My Application</span>
+</mat-toolbar>
+
+<mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+  <ng-container matColumnDef="brand_id">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> brand_id</mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.brand_id}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="brand_name">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> brand_name</mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.brand_name}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="sp_for_brand">
+    <mat-header-cell *matHeaderCellDef> sp_for_brand</mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.sp_for_brand}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="sp_potentialsp_for_brand_percentage"> <!-- 4-->
+    <mat-header-cell *matHeaderCellDef> sp_potentialsp_for_brand_percentage</mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.sp_potentialsp_for_brand_percentage}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="sp_potential">
+    <mat-header-cell *matHeaderCellDef> sp_potential</mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.sp_potential}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="sp_brand_total_territory">
+    <mat-header-cell *matHeaderCellDef> sp_brand_total_territory</mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.sp_brand_total_territory}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="brand_potential">
+    <mat-header-cell *matHeaderCellDef> brand_potential</mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.brand_potential}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="brand_per_sp_percentage">
+    <mat-header-cell *matHeaderCellDef> brand_per_sp_percentage</mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.brand_per_sp_percentage}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="brand_efficency">
+    <mat-header-cell *matHeaderCellDef> brand_efficency</mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.brand_efficency}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="value_eeficency">
+    <mat-header-cell *matHeaderCellDef> value_eeficency</mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.value_eeficency}}</mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+<mat-paginator [pageSizeOptions]="[2, 10, 25, 100]" [pageSize]="5" showFirstLastButtons></mat-paginator>
+

@@ -3,6 +3,7 @@ import {IOffer} from '../../shared/offer/offer';
 import {MatDialog, MatDialogConfig, MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 import {OfferService} from '../../shared/offer/offer.service';
 import {OfferComponent} from '../offer/offer.component';
+import {NationService} from '../../shared/map/nation.service';
 
 
 const ELEMENT_DATA: IOffer[] = [
@@ -26,7 +27,7 @@ const ELEMENT_DATA: IOffer[] = [
 })
 export class OfferListComponent implements OnInit {
 
-  constructor(private service: OfferService,
+  constructor(private service: NationService,
               private dialog: MatDialog) {
   }
   @ViewChild(MatSort, {static: false}) sort: MatSort;
