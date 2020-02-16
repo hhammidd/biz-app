@@ -85,6 +85,9 @@ import {CapService} from './shared/map/cap.service';
 import { BrandMicrosComponent } from './studies/brands/brand-micros/brand-micros.component';
 import { BrandMicroComponent } from './studies/brands/brand-micros/brand-micro/brand-micro.component';
 import { BrandMicroListComponent } from './studies/brands/brand-micros/brand-micro-list/brand-micro-list.component';
+import { ComuneCongifsComponent } from './map/comune-congifs/comune-congifs.component';
+import { ComuneConfigComponent } from './map/comune-congifs/comune-config/comune-config.component';
+import {ComuneConfigService} from './shared/map/comune-config.service';
 
 
 @NgModule({
@@ -162,6 +165,9 @@ import { BrandMicroListComponent } from './studies/brands/brand-micros/brand-mic
     BrandMicroComponent,
     BrandMicroListComponent,
 
+    ComuneCongifsComponent,
+    ComuneConfigComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -174,14 +180,14 @@ import { BrandMicroListComponent } from './studies/brands/brand-micros/brand-mic
   RoleService, PermissionService, ProductService,
   BrandQuestionService, BrandAnswerService,
   ParameterQuestionService, ParameterAnswerService,
-  NationService, RegionService, ProvinceService, ComuneService, CapService],
+  NationService, RegionService, ProvinceService, ComuneService, CapService, ComuneConfigService],
 
   bootstrap: [AppComponent],
   entryComponents: [SalePointComponent, OfferComponent, UserComponent,
   RoleComponent, PermissionComponent, ProductComponent,
     BrandQuestionComponent, BrandAnswerComponent,
   ParameterQuestionComponent, ParameterAnswerComponent,
-  NationComponent, RegionComponent, ProvinceComponent, ComuneComponent, CapComponent]
+  NationComponent, RegionComponent, ProvinceComponent, ComuneComponent, CapComponent, ComuneConfigComponent]
 })
 export class AppModule {
 }
