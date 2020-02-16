@@ -25,8 +25,8 @@ import {ProvincesComponent} from './map/provinces/provinces.component';
 import {ComuniComponent} from './map/comuni/comuni.component';
 import {CapsComponent} from './map/caps/caps.component';
 import {BrandMicrosComponent} from './studies/brands/brand-micros/brand-micros.component';
-import {ComuneConfigComponent} from './map/comune-congifs/comune-config/comune-config.component';
-import {ComuneCongifsComponent} from './map/comune-congifs/comune-congifs.component';
+import {ComuneConfigComponent} from './map/comune-configs/comune-config/comune-config.component';
+import {ComuneConfigsComponent} from './map/comune-configs/comune-configs.component';
 
 
 const routes: Routes = [
@@ -55,7 +55,7 @@ const routes: Routes = [
   {path: 'province', component: ProvincesComponent},
   {path: 'comune', component: ComuniComponent},
   {path: 'cap', component: CapsComponent},
-  {path: 'comuneconfig', component: ComuneCongifsComponent},
+  {path: 'comuneconfig', component: ComuneConfigsComponent},
 
   {
     path: 'studies', component: StudiesComponent,
