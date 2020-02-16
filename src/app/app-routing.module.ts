@@ -27,6 +27,7 @@ import {CapsComponent} from './map/caps/caps.component';
 import {BrandMicrosComponent} from './studies/brands/brand-micros/brand-micros.component';
 import {ComuneConfigComponent} from './map/comune-configs/comune-config/comune-config.component';
 import {ComuneConfigsComponent} from './map/comune-configs/comune-configs.component';
+import {BrandCalculationsComponent} from './studies/brands/brand-calculations/brand-calculations.component';
 
 
 const routes: Routes = [
@@ -45,6 +46,7 @@ const routes: Routes = [
   {path: 'brand-question', component: BrandQuestionsComponent},
   {path: 'brand-answer', component: BrandAnswersComponent},
   {path: 'brand-micro', component: BrandMicrosComponent},
+  {path: 'brand-calculations', component: BrandCalculationsComponent},
 
   {path: 'parameter-question', component: ParameterQuestionsComponent},
   {path: 'parameter-answer', component: ParameterAnswersComponent},

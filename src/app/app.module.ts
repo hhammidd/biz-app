@@ -1,8 +1,11 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+
 import {AppRoutingModule, routingComponents} from './app-routing.module';
 import {ReactiveFormsModule} from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
+//import { ToastrModule } from 'ngx-toastr';
 
 import {AppComponent} from './app.component';
 import {NavbarComponent} from './navbar/navbar.component';
@@ -89,6 +92,9 @@ import { ComuneConfigsComponent } from './map/comune-configs/comune-configs.comp
 import { ComuneConfigComponent } from './map/comune-configs/comune-config/comune-config.component';
 import {ComuneConfigService} from './shared/map/comune-config.service';
 import { ComuneConfigListComponent } from './map/comune-configs/comune-config-list/comune-config-list.component';
+import { BrandCalculationsComponent } from './studies/brands/brand-calculations/brand-calculations.component';
+import {BrandCalculationsService} from './shared/studies/brand/brand-calculations.service';
+import { BrandCalculationComponent } from './studies/brands/brand-calculations/brand-calculation/brand-calculation.component';
 
 
 @NgModule({
@@ -171,19 +177,26 @@ import { ComuneConfigListComponent } from './map/comune-configs/comune-config-li
     ComuneListComponent,
     ComuneConfigListComponent,
 
+    BrandCalculationsComponent,
+    BrandCalculationComponent,
+
   ],
   imports: [
     BrowserModule,
     MaterialModule,
+    FormsModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    //ToastrModule.forRoot(),
     ReactiveFormsModule
   ],
   providers: [SalePointService, OfferService, UserService,
   RoleService, PermissionService, ProductService,
   BrandQuestionService, BrandAnswerService,
   ParameterQuestionService, ParameterAnswerService,
-  NationService, RegionService, ProvinceService, ComuneService, CapService, ComuneConfigService],
+  NationService, RegionService, ProvinceService, ComuneService, CapService, ComuneConfigService,
+  BrandCalculationsService],
 
   bootstrap: [AppComponent],
   entryComponents: [SalePointComponent, OfferComponent, UserComponent,
@@ -191,7 +204,7 @@ import { ComuneConfigListComponent } from './map/comune-configs/comune-config-li
     BrandQuestionComponent, BrandAnswerComponent,
   ParameterQuestionComponent, ParameterAnswerComponent,
   NationComponent, RegionComponent, ProvinceComponent, ComuneComponent, CapComponent,
-    ComuneConfigComponent]
+    ComuneConfigComponent, BrandCalculationComponent]
 })
 export class AppModule {
 }

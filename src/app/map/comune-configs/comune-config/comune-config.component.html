@@ -1,1 +1,25 @@
-<h1>bbbb</h1>
+<form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
+  <input type="hidden" name="comuneId" #comuneId="ngModel" [(ngModel)]="service.formData.comuneId">
+  <div class="form-group">
+    <label>Comune Name 1</label>
+    <input name="comuneName1" #comuneName1="ngModel" [(ngModel)]="service.formData.comuneName1" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label>Comune Name 2</label>
+    <input name="comuneName2" #comuneName2="ngModel" [(ngModel)]="service.formData.comuneName2" class="form-control">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label>Code comune</label>
+      <input name="codeComune" #codeComune="ngModel" [(ngModel)]="service.formData.codeComune" class="form-control">
+    </div>
+    <div class="form-group  col-md-6">
+      <label>Code Father</label>
+      <input name="codeFather" #codeFather="ngModel" [(ngModel)]="service.formData.codeFather" class="form-control">
+    </div>
+
+  </div>
+  <div class="form-group">
+    <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block">SUBMIT</button>
+  </div>
+</form>
