@@ -28,6 +28,11 @@ import {BrandMicrosComponent} from './studies/brands/brand-micros/brand-micros.c
 import {ComuneConfigComponent} from './map/comune-configs/comune-config/comune-config.component';
 import {ComuneConfigsComponent} from './map/comune-configs/comune-configs.component';
 import {BrandCalculationsComponent} from './studies/brands/brand-calculations/brand-calculations.component';
+import {DistributionComponent} from './distribution/distribution.component';
+import {LogisticComponent} from './distribution/logistics/logistic/logistic.component';
+import {BuyinghouseComponent} from './buyinghouse/buyinghouse.component';
+import {PriceInfoComponent} from './buyinghouse/priceinfos/price-info/price-info.component';
+import {PriceinfosComponent} from './buyinghouse/priceinfos/priceinfos.component';
 
 
 const routes: Routes = [
@@ -59,10 +64,17 @@ const routes: Routes = [
   {path: 'cap', component: CapsComponent},
   {path: 'comuneconfig', component: ComuneConfigsComponent},
 
+  {path: 'distribution', component: DistributionComponent},
+  {path: 'logistic', component: LogisticComponent},
+
+  {path: 'buyinghouse', component: BuyinghouseComponent},
+  {path: 'priceinfo', component: PriceinfosComponent},
+
+
   {
     path: 'studies', component: StudiesComponent,
     children: [
-      {path: 'brand', component: BrandsComponent},//Not working child
+      {path: 'brand', component: BrandsComponent}, // Not working child
       {path: 'service', component: ServicesComponent},
       {path: 'potential', component: PotentialsComponent},
       {path: 'parameter', component: ParametersComponent},
@@ -101,4 +113,6 @@ export const routingComponents = [
   ProductsComponent,
   StudiesComponent,
   MapComponent,
+  DistributionComponent,
+  BuyinghouseComponent
 ];

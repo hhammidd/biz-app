@@ -95,6 +95,15 @@ import { ComuneConfigListComponent } from './map/comune-configs/comune-config-li
 import { BrandCalculationsComponent } from './studies/brands/brand-calculations/brand-calculations.component';
 import {BrandCalculationsService} from './shared/studies/brand/brand-calculations.service';
 import { BrandCalculationComponent } from './studies/brands/brand-calculations/brand-calculation/brand-calculation.component';
+import { DistributionComponent } from './distribution/distribution.component';
+import { LogisticsComponent } from './distribution/logistics/logistics.component';
+import { LogisticComponent } from './distribution/logistics/logistic/logistic.component';
+import { LogisticListComponent } from './distribution/logistics/logistic-list/logistic-list.component';
+import { BuyinghouseComponent } from './buyinghouse/buyinghouse.component';
+import { PriceinfosComponent } from './buyinghouse/priceinfos/priceinfos.component';
+import { PriceInfoComponent } from './buyinghouse/priceinfos/price-info/price-info.component';
+import { PriceInfoListComponent } from './buyinghouse/priceinfos/price-info-list/price-info-list.component';
+import {PriceInfoService} from './shared/buyinghouse/price-info.service';
 
 
 @NgModule({
@@ -180,6 +189,18 @@ import { BrandCalculationComponent } from './studies/brands/brand-calculations/b
     BrandCalculationsComponent,
     BrandCalculationComponent,
 
+    //Distribution
+    DistributionComponent,
+    LogisticsComponent,
+    LogisticComponent,
+    LogisticListComponent,
+
+    //Buy house
+    BuyinghouseComponent,
+    PriceinfosComponent,
+    PriceInfoComponent,
+    PriceInfoListComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -196,7 +217,7 @@ import { BrandCalculationComponent } from './studies/brands/brand-calculations/b
   BrandQuestionService, BrandAnswerService,
   ParameterQuestionService, ParameterAnswerService,
   NationService, RegionService, ProvinceService, ComuneService, CapService, ComuneConfigService,
-  BrandCalculationsService],
+  BrandCalculationsService, PriceInfoService],
 
   bootstrap: [AppComponent],
   entryComponents: [SalePointComponent, OfferComponent, UserComponent,
@@ -204,7 +225,7 @@ import { BrandCalculationComponent } from './studies/brands/brand-calculations/b
     BrandQuestionComponent, BrandAnswerComponent,
   ParameterQuestionComponent, ParameterAnswerComponent,
   NationComponent, RegionComponent, ProvinceComponent, ComuneComponent, CapComponent,
-    ComuneConfigComponent, BrandCalculationComponent]
+    ComuneConfigComponent, BrandCalculationComponent, LogisticComponent, PriceInfoComponent]
 })
 export class AppModule {
 }

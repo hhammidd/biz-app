@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import {Component, OnInit} from '@angular/core';
+import {NgForm} from '@angular/forms';
 import {ComuneConfigService} from '../../../shared/map/comune-config.service';
-import { NgForm } from '@angular/forms';
+
 //import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -11,7 +11,9 @@ import { NgForm } from '@angular/forms';
 })
 export class ComuneConfigComponent implements OnInit {
 
-  constructor(private service: ComuneConfigService){ }
+  constructor(private service: ComuneConfigService) {
+  }
+
   ngOnInit() {
     this.resetForm();
   }

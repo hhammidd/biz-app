@@ -1,8 +1,13 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {ComuneService} from '../../../shared/map/comune.service';
 import {MatDialog, MatDialogConfig, MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
-import {ComuneComponent} from '../../comuni/comune/comune.component';
 import {CapComponent} from '../cap/cap.component';
+import {ICap} from '../../../shared/map/cap';
+
+const ELEMENT_DATA: ICap[] = [
+  {cap_id: 1, cap_name: 'kit kat', cap_code: 'NL'},
+  {cap_id: 2, cap_name: 'kit kat', cap_code: 'NL'}
+];
 
 @Component({
   selector: 'app-cap-list',
@@ -14,6 +19,7 @@ export class CapListComponent implements OnInit {
   constructor(private service: ComuneService,
               private dialog: MatDialog) {
   }
+
   @ViewChild(MatSort, {static: false}) sort: MatSort;
   @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
 
