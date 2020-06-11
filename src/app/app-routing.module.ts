@@ -25,14 +25,13 @@ import {ProvincesComponent} from './map/provinces/provinces.component';
 import {ComuniComponent} from './map/comuni/comuni.component';
 import {CapsComponent} from './map/caps/caps.component';
 import {BrandMicrosComponent} from './studies/brands/brand-micros/brand-micros.component';
-import {ComuneConfigComponent} from './map/comune-configs/comune-config/comune-config.component';
 import {ComuneConfigsComponent} from './map/comune-configs/comune-configs.component';
 import {BrandCalculationsComponent} from './studies/brands/brand-calculations/brand-calculations.component';
 import {DistributionComponent} from './distribution/distribution.component';
 import {LogisticComponent} from './distribution/logistics/logistic/logistic.component';
 import {BuyinghouseComponent} from './buyinghouse/buyinghouse.component';
-import {PriceInfoComponent} from './buyinghouse/priceinfos/price-info/price-info.component';
 import {PriceinfosComponent} from './buyinghouse/priceinfos/priceinfos.component';
+import {ZoneinfosComponent} from './buyinghouse/zoneinfos/zoneinfos.component';
 
 
 const routes: Routes = [
@@ -70,6 +69,7 @@ const routes: Routes = [
   {path: 'buyinghouse', component: BuyinghouseComponent},
   {path: 'priceinfo', component: PriceinfosComponent},
 
+  {path: 'zoneinfo', component: ZoneinfosComponent},
 
   {
     path: 'studies', component: StudiesComponent,

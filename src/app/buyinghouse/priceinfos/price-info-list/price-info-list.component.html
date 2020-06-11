@@ -1,16 +1,20 @@
 <table class="table table-hover">
   <thead>
-  <td>Comune Name 1</td>
-  <td>Comune Name 2</td>
-  <td>codeComune</td>
-  <td>codeFather</td>
+  <td>Postalcode</td>
+  <td>constructionYear</td>
+  <td>Date in Market</td>
+  <td>Total price</td>
+  <td>Price per meter</td>
+
   </thead>
   <tbody>
-  <tr *ngFor="let emp of service.list">
-    <td (click)="populateForm(emp)">{{emp.comuneName1}}</td>
-    <td (click)="populateForm(emp)">{{emp.comuneName2}}</td>
-    <td (click)="populateForm(emp)">{{emp.codeComune}}</td>
-    <td (click)="populateForm(emp)">{{emp.codeFather}}</td>
-    <td><button (click)="onDelete(emp.comuneId)" class="btn btn-sm btn-outline-danger">X</button></td>
+  <tr *ngFor="let pricInfo of service.list">
+    <td (click)="populateForm(pricInfo)">{{pricInfo.postalCode}}</td>
+    <td (click)="populateForm(pricInfo)">{{pricInfo.constructionYear}}</td>
+    <td (click)="populateForm(pricInfo)">{{pricInfo.dateInMarket}}</td>
+    <td (click)="populateForm(pricInfo)">{{pricInfo.price}}</td>
+    <td (click)="populateForm(pricInfo)">{{pricInfo.pricePermeter}}</td>
+
+    <td><button (click)="onDelete(pricInfo.id)" class="btn btn-sm btn-outline-danger">X</button></td>
   </tr>
 </table>

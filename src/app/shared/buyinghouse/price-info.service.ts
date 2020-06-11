@@ -26,7 +26,7 @@ export class PriceInfoService {
 
   refreshList() {
     console.log('ddd');
-    this.http.get<PriceInfo[]>(this.usersUrl + '/pricecheck/price')
+    this.http.get<PriceInfo[]>(this.usersUrl + '/pricecheck')
       .toPromise().then(res => this.list = res as PriceInfo[]);
   }
 

@@ -6,18 +6,20 @@
   </div>
   <div class="form-group">
     <label>Postalcode + City</label>
-    <input name="cityPostalcode" #cityPostalcode="ngModel" [(ngModel)]="service.formData.cityPostalcode" class="form-control">
+    <input name="cityPostalcode" #cityPostalcode="ngModel" [(ngModel)]="service.formData.cityPostalcode"
+           class="form-control">
   </div>
   <div class="form-row">
-    <div class="form-group col-md-6">
-      <label>Days in market</label>
-      <input name="daysOnMarket" #daysOnMarket="ngModel" [(ngModel)]="service.formData.daysOnMarket" class="form-control">
-    </div>
 
+    <div class="form-group col-md-6">
+      <label>Report from</label>
+      <input [ngModel]="dateInMarket | date:'yyyy-MM-dd'" (ngModelChange)="dateInMarket = $event"
+             type="date" name="dateInMarket" class="form-control">
+    </div>
 
     <div class="form-group">
       <label for="energy">Energy</label>
-      <select class="form-control"  id="energy"
+      <select class="form-control" id="energy"
               required
               [(ngModel)]="service.formData.energy" name="energy">
         <option *ngFor="let department of energyLevels" value="{{department.value}}">{{department.value}}</option>
@@ -31,7 +33,7 @@
 
     <div class="form-group">
       <label for="homeType">Home Type</label>
-      <select class="form-control"  id="homeType"
+      <select class="form-control" id="homeType"
               required
               [(ngModel)]="service.formData.homeType" name="homeType">
         <option *ngFor="let homeType of homeTypes" value="{{homeType.value}}">{{homeType.value}}</option>
@@ -40,17 +42,25 @@
 
     <div class="form-group  col-md-6">
       <label>living area meter</label>
-      <input name="livingAreaMeter" #livingAreaMeter="ngModel" [(ngModel)]="service.formData.livingAreaMeter" class="form-control">
+      <input name="livingAreaMeter" #livingAreaMeter="ngModel" [(ngModel)]="service.formData.livingAreaMeter"
+             class="form-control">
     </div>
 
     <div class="form-group  col-md-6">
       <label>Meter</label>
       <input name="meter" #meter="ngModel" [(ngModel)]="service.formData.meter" class="form-control">
     </div>
-    <div class="form-group  col-md-6">
-      <label>Construction year</label>
-      <input name="year" #year="ngModel" [(ngModel)]="service.formData.year" class="form-control">
+
+
+    <div class="form-group">
+      <label for="homeType">Construction year</label>
+      <select class="form-control" id="homeType"
+              required
+              [(ngModel)]="service.formData.constructionYear" name="year">
+        <option *ngFor="let constructionYear of years" value="{{constructionYear.id}}">{{constructionYear.value}}</option>
+      </select>
     </div>
+
     <div class="form-group  col-md-6">
       <label>Price</label>
       <input name="price" #price="ngModel" [(ngModel)]="service.formData.price" class="form-control">
