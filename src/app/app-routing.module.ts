@@ -35,7 +35,6 @@ import {ZoneinfosComponent} from './buyinghouse/zoneinfos/zoneinfos.component';
 
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
   {path: 'salepoint', component: SalePointsComponent},
   {path: 'offer', component: OffersComponent},
   {path: 'user', component: UsersComponent},
