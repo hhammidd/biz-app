@@ -32,11 +32,16 @@ import {LogisticComponent} from './distribution/logistics/logistic/logistic.comp
 import {BuyinghouseComponent} from './buyinghouse/buyinghouse.component';
 import {PriceinfosComponent} from './buyinghouse/priceinfos/priceinfos.component';
 import {ZoneinfosComponent} from './buyinghouse/zoneinfos/zoneinfos.component';
+import {AppgisComponent} from "./appgis/appgis.component";
+import {DashboardComponent} from "./dashboard/dashboard.component";
 
 
 const routes: Routes = [
+  {path: '', component: HomeComponent},
+  {path: 'appgis', component: AppgisComponent},
+  {path: 'dashboard', component: DashboardComponent},
   {path: 'salepoint', component: SalePointsComponent},
-  {path: 'offer', component: OffersComponent},
+  {path: 'appgis/offer', component: OffersComponent},
   {path: 'user', component: UsersComponent},
   {path: 'role', component: RolesComponent},
   {path: 'permission', component: PermissionsComponent},

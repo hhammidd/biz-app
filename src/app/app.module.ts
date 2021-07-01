@@ -104,6 +104,8 @@ import {PriceInfoService} from './shared/buyinghouse/price-info.service';
 import {ZoneinfosComponent} from './buyinghouse/zoneinfos/zoneinfos.component';
 import {ZoneInfoComponent} from './buyinghouse/zoneinfos/zone-info/zone-info.component';
 import {ZoneInfoListComponent} from './buyinghouse/zoneinfos/zone-info-list/zone-info-list.component';
+import { AppgisComponent } from './appgis/appgis.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 //import { ToastrModule } from 'ngx-toastr';
 
@@ -205,6 +207,8 @@ import {ZoneInfoListComponent} from './buyinghouse/zoneinfos/zone-info-list/zone
     ZoneinfosComponent,
     ZoneInfoComponent,
     ZoneInfoListComponent,
+    AppgisComponent,
+    DashboardComponent,
 
   ],
   imports: [

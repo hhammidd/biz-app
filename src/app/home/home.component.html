@@ -1,1 +1,12 @@
-<p>home works!</p>
+<div>
+  <button mat-raised-button routerLink="/appgis" routerLinkActive="">App Gis</button>
+  <button mat-raised-button routerLink="/dashboard" routerLinkActive="">Dashboard</button>
+  <button mat-raised-button routerLink="/appgis" routerLinkActive="">App Gis</button>
+</div>
+<mat-grid-list [cols]="2" rowHeight="fit" style="height: 200px" gutterSize="10px">
+  <mat-grid-tile routerLink="/dashboard" routerLinkActive="">Dashboard</mat-grid-tile>
+  <mat-grid-tile routerLink="/appgis" routerLinkActive="">Gis App</mat-grid-tile>
+  <mat-grid-tile>Statistic</mat-grid-tile>
+  <mat-grid-tile>blabla</mat-grid-tile>
+</mat-grid-list>
+<router-outlet></router-outlet>
