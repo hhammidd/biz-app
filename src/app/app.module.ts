@@ -106,6 +106,7 @@ import {ZoneInfoComponent} from './buyinghouse/zoneinfos/zone-info/zone-info.com
 import {ZoneInfoListComponent} from './buyinghouse/zoneinfos/zone-info-list/zone-info-list.component';
 import { AppgisComponent } from './appgis/appgis.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 //import { ToastrModule } from 'ngx-toastr';
 
@@ -209,6 +210,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     ZoneInfoListComponent,
     AppgisComponent,
     DashboardComponent,
+    ToolbarComponent,
 
   ],
   imports: [
