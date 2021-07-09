@@ -23,11 +23,10 @@ export class ComuneConfigComponent implements OnInit {
       form.resetForm();
     }
     this.service.formData = {
-      comuneId: null,
-      comuneName1: '',
-      comuneName2: '',
-      codeComune: '',
-      codeFather: 1
+      comuneId: 1,
+      comuneName: '1',
+      comuneCode: '1',
+      provinceId: 1
     };
   }
 

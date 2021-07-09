@@ -1,16 +1,14 @@
 <table class="table table-hover">
   <thead>
-  <td>Address</td>
-  <td>C</td>
-  <td>codeComune</td>
-  <td>codeFather</td>
+  <td>ComuneName</td>
+  <td>ComuneCode</td>
+  <td>ProvinceId</td>
   </thead>
   <tbody>
   <tr *ngFor="let emp of service.list">
-    <td (click)="populateForm(emp)">{{emp.comuneName1}}</td>
-    <td (click)="populateForm(emp)">{{emp.comuneName2}}</td>
-    <td (click)="populateForm(emp)">{{emp.codeComune}}</td>
-    <td (click)="populateForm(emp)">{{emp.codeFather}}</td>
+    <td (click)="populateForm(emp)">{{emp.comuneName}}</td>
+    <td (click)="populateForm(emp)">{{emp.comuneCode}}</td>
+    <td (click)="populateForm(emp)">{{emp.provinceId}}</td>
     <td><button (click)="onDelete(emp.comuneId)" class="btn btn-sm btn-outline-danger">X</button></td>
   </tr>
 </table>

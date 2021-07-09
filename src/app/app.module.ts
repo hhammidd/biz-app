@@ -104,9 +104,14 @@ import {PriceInfoService} from './shared/buyinghouse/price-info.service';
 import {ZoneinfosComponent} from './buyinghouse/zoneinfos/zoneinfos.component';
 import {ZoneInfoComponent} from './buyinghouse/zoneinfos/zone-info/zone-info.component';
 import {ZoneInfoListComponent} from './buyinghouse/zoneinfos/zone-info-list/zone-info-list.component';
-import { AppgisComponent } from './appgis/appgis.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { ToolbarComponent } from './toolbar/toolbar.component';
+import {DashboardComponent} from './dashboard/dashboard.component';
+import {FieldComponentComponent} from './appgis/toolbar/field-component/field-component.component';
+import {FieldService} from "./appgis/toolbar/field-component/fieldComponent/field.service";
+import {AppgisModule} from "./appgis/appgis.module";
+import {AppgisComponent} from "./appgis/appgis.component";
+import {ToolbarComponent} from "./appgis/toolbar/toolbar.component";
+import {MapsidebarComponent} from "./appgis/mapsidebar/mapsidebar.component";
+import {MapfilterComponent} from "./appgis/mapfilter/mapfilter.component";
 
 //import { ToastrModule } from 'ngx-toastr';
 
@@ -208,9 +213,12 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     ZoneinfosComponent,
     ZoneInfoComponent,
     ZoneInfoListComponent,
-    AppgisComponent,
+     AppgisComponent,
     DashboardComponent,
-    ToolbarComponent,
+     ToolbarComponent,
+     MapsidebarComponent,
+     MapfilterComponent,
+    FieldComponentComponent,
 
   ],
   imports: [
@@ -221,14 +229,15 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     //ToastrModule.forRoot(),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    // AppgisModule
   ],
   providers: [SalePointService, OfferService, UserService,
     RoleService, PermissionService, ProductService,
     BrandQuestionService, BrandAnswerService,
     ParameterQuestionService, ParameterAnswerService,
     NationService, RegionService, ProvinceService, ComuneService, CapService, ComuneConfigService,
-    BrandCalculationsService, PriceInfoService],
+    BrandCalculationsService, PriceInfoService, FieldService],
 
   bootstrap: [AppComponent],
   entryComponents: [SalePointComponent, OfferComponent, UserComponent,
@@ -236,7 +245,8 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     BrandQuestionComponent, BrandAnswerComponent,
     ParameterQuestionComponent, ParameterAnswerComponent,
     NationComponent, RegionComponent, ProvinceComponent, ComuneComponent, CapComponent,
-    ComuneConfigComponent, BrandCalculationComponent, LogisticComponent, PriceInfoComponent, ZoneInfoComponent]
+    ComuneConfigComponent, BrandCalculationComponent, LogisticComponent, PriceInfoComponent, ZoneInfoComponent,
+    FieldComponentComponent]
 })
 export class AppModule {
 }

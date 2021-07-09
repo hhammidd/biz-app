@@ -6,10 +6,10 @@ import {ComuneComponent} from '../comune/comune.component';
 
 
 const ELEMENT_DATA: IComune[] = [
-  {comune_id: 1, comune_name: 'kit kat', comune_code: 'NL'},
-  {comune_id: 2, comune_name: 'kit kat', comune_code: 'NL'},
-  {comune_id: 3, comune_name: 'kit kat', comune_code: 'NL'},
-  {comune_id: 4, comune_name: 'kit kat', comune_code: 'NL'},
+  {comuneId: 1, comuneName: 'kit kat', comuneCode: 'NL'},
+  {comuneId: 2, comuneName: 'kit kat', comuneCode: 'NL'},
+  {comuneId: 3, comuneName: 'kit kat', comuneCode: 'NL'},
+  {comuneId: 4, comuneName: 'kit kat', comuneCode: 'NL'},
 ];
 
 @Component({
@@ -28,7 +28,7 @@ export class ComuneListComponent implements OnInit {
 
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
-  displayedColumns: string[] = ['comune_id', 'comune_name', 'comune_code', 'actions'];
+  displayedColumns: string[] = ['comuneId', 'comuneName', 'comuneCode', 'actions'];
 
 
   ngOnInit() {

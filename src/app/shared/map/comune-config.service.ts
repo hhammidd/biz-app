@@ -11,7 +11,7 @@ export class ComuneConfigService {
   // private url: string;
 
   constructor(private http: HttpClient) {
-    this.usersUrl = 'http://localhost:8087';
+    this.usersUrl = 'http://127.0.0.1:8087';
     // this.url = '/assets/data/employees.json';
 
   }
