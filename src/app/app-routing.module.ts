@@ -32,6 +32,7 @@ import {LogisticComponent} from './distribution/logistics/logistic/logistic.comp
 import {BuyinghouseComponent} from './buyinghouse/buyinghouse.component';
 import {PriceinfosComponent} from './buyinghouse/priceinfos/priceinfos.component';
 import {ZoneinfosComponent} from './buyinghouse/zoneinfos/zoneinfos.component';
+import {CountryappComponent} from "./countryapp/countryapp.component";
 
 
 const routes: Routes = [
@@ -66,6 +67,7 @@ const routes: Routes = [
   {path: 'logistic', component: LogisticComponent},
 
   {path: 'buyinghouse', component: BuyinghouseComponent},
+  {path: 'countryapp', component: CountryappComponent},
   {path: 'priceinfo', component: PriceinfosComponent},
 
   {path: 'zoneinfo', component: ZoneinfosComponent},
@@ -113,5 +115,6 @@ export const routingComponents = [
   StudiesComponent,
   MapComponent,
   DistributionComponent,
-  BuyinghouseComponent
+  BuyinghouseComponent,
+  CountryappComponent
 ];

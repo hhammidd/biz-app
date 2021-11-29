@@ -104,8 +104,9 @@ import {PriceInfoService} from './shared/buyinghouse/price-info.service';
 import {ZoneinfosComponent} from './buyinghouse/zoneinfos/zoneinfos.component';
 import {ZoneInfoComponent} from './buyinghouse/zoneinfos/zone-info/zone-info.component';
 import {ZoneInfoListComponent} from './buyinghouse/zoneinfos/zone-info-list/zone-info-list.component';
+import { CountryappComponent } from './countryapp/countryapp.component';
 
-//import { ToastrModule } from 'ngx-toastr';
+// import { ToastrModule } from 'ngx-toastr';
 
 
 @NgModule({
@@ -162,7 +163,9 @@ import {ZoneInfoListComponent} from './buyinghouse/zoneinfos/zone-info-list/zone
     ParameterQuestionComponent,
     ParameterQuestionListComponent,
 
-    //Map components
+    CountryappComponent,
+
+    // Map components
     MapComponent,
     NationsComponent,
     NationComponent,
@@ -191,13 +194,13 @@ import {ZoneInfoListComponent} from './buyinghouse/zoneinfos/zone-info-list/zone
     BrandCalculationsComponent,
     BrandCalculationComponent,
 
-    //Distribution
+    // Distribution
     DistributionComponent,
     LogisticsComponent,
     LogisticComponent,
     LogisticListComponent,
 
-    //Buy house
+    // Buy house
     BuyinghouseComponent,
     PriceinfosComponent,
     PriceInfoComponent,
@@ -205,6 +208,7 @@ import {ZoneInfoListComponent} from './buyinghouse/zoneinfos/zone-info-list/zone
     ZoneinfosComponent,
     ZoneInfoComponent,
     ZoneInfoListComponent,
+    CountryappComponent,
 
   ],
   imports: [
@@ -214,7 +218,7 @@ import {ZoneInfoListComponent} from './buyinghouse/zoneinfos/zone-info-list/zone
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    //ToastrModule.forRoot(),
+    // ToastrModule.forRoot(),
     ReactiveFormsModule
   ],
   providers: [SalePointService, OfferService, UserService,
@@ -230,7 +234,7 @@ import {ZoneInfoListComponent} from './buyinghouse/zoneinfos/zone-info-list/zone
     BrandQuestionComponent, BrandAnswerComponent,
     ParameterQuestionComponent, ParameterAnswerComponent,
     NationComponent, RegionComponent, ProvinceComponent, ComuneComponent, CapComponent,
-    ComuneConfigComponent, BrandCalculationComponent, LogisticComponent, PriceInfoComponent, ZoneInfoComponent]
+    ComuneConfigComponent, BrandCalculationComponent, LogisticComponent, PriceInfoComponent, ZoneInfoComponent, CountryappComponent]
 })
 export class AppModule {
 }

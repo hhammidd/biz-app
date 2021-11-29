@@ -23,7 +23,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     Material.MatPaginatorModule,
     Material.MatSortModule,
     Material.MatDialogModule,
-    Material.MatTableModule
+    Material.MatTableModule,
+    Material.MatTreeModule
   ],
   exports: [
     Material.MatToolbarModule,
@@ -41,6 +42,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     Material.MatIconModule,
     Material.MatPaginatorModule,
     Material.MatSortModule,
+    Material.MatTreeModule
 
   ],
   declarations: []

@@ -24,10 +24,9 @@ export class ComuneConfigComponent implements OnInit {
     }
     this.service.formData = {
       comuneId: null,
-      comuneName1: '',
-      comuneName2: '',
-      codeComune: '',
-      codeFather: 1
+      comuneName: '',
+      comuneCode: '',
+      provinceId: 1
     };
   }
 
