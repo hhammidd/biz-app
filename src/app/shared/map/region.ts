@@ -1,5 +1,6 @@
 export interface IRegion {
-  region_id: number;
-  region_name: string;
-  region_code: string;
+  regionId: number;
+  regionName: string;
+  regionCode: string;
+  nationId: number;
 }

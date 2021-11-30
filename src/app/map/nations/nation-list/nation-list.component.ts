@@ -3,8 +3,9 @@ import {INation} from '../../../shared/map/nation';
 import {MatDialog, MatDialogConfig, MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 import {NationComponent} from '../nation/nation.component';
 import {NationService} from '../../../shared/map/nation.service';
+import {INationOld} from "../../../shared/map/nationold";
 
-const ELEMENT_DATA: INation[] = [
+const ELEMENT_DATA: INationOld[] = [
   {nation_id: 1, nation_name: 'kit kat', nation_code: 'NL'},
   {nation_id: 2, nation_name: 'kit kat', nation_code: 'NL'},
   {nation_id: 3, nation_name: 'kit kat', nation_code: 'NL'},

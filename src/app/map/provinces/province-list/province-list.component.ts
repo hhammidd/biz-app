@@ -1,12 +1,10 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {INation} from '../../../shared/map/nation';
 import {RegionService} from '../../../shared/map/region.service';
 import {MatDialog, MatDialogConfig, MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
-import {RegionComponent} from '../../regions/region/region.component';
 import {ProvinceComponent} from '../province/province.component';
-import {IProvince} from '../../../shared/map/province';
+import {IProvinceOld} from '../../../shared/map/provinceold';
 
-const ELEMENT_DATA: IProvince[] = [
+const ELEMENT_DATA: IProvinceOld[] = [
   {province_id: 1, province_name: 'kit kat', province_code: 'NL'},
   {province_id: 2, province_name: 'kit kat', province_code: 'NL'},
   {province_id: 3, province_name: 'kit kat', province_code: 'NL'},

@@ -3,9 +3,9 @@ import {INation} from '../../../shared/map/nation';
 import {MatDialog, MatDialogConfig, MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 import {RegionService} from '../../../shared/map/region.service';
 import {RegionComponent} from '../region/region.component';
-import {IRegion} from '../../../shared/map/region';
+import {IRegionOld} from '../../../shared/map/regionold';
 
-const ELEMENT_DATA: IRegion[] = [
+const ELEMENT_DATA: IRegionOld[] = [
   {region_id: 1, region_name: 'kit kat', region_code: 'NL'},
   {region_id: 2, region_name: 'kit kat', region_code: 'NL'},
   {region_id: 3, region_name: 'kit kat', region_code: 'NL'},

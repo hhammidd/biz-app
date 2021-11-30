@@ -1,0 +1,39 @@
+{
+  "countries": [
+    {
+      "id": 1,
+      "name": "Italy"
+    },
+    {
+      "id": 2,
+      "name": "Netherlands"
+    }
+  ],
+  "states":[
+    {
+      "id": 1,
+      "name": "Lombardia",
+      "country_id": 1
+    },
+    {
+      "id": 2,
+      "name": "Toscani",
+      "country_id": 1
+    },
+    {
+      "id": 3,
+      "name": "Piomonte",
+      "country_id": 1
+    },
+    {
+      "id": 4,
+      "name": "South Holand",
+      "country_id": 2
+    },
+    {
+      "id": 5,
+      "name": "North Holand",
+      "country_id": 2
+    }
+  ]
+}

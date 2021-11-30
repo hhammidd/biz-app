@@ -1,5 +1,6 @@
 export interface INation {
-  nation_id: number;
-  nation_name: string;
-  nation_code;
+  nationId: number;
+  nationName: string;
+  nationCode: string;
+  nationFather: number;
 }

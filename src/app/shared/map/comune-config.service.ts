@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {ComuneConfig} from './comuneConfig.model';
+import {INation} from "./nation";
 
 @Injectable({
   providedIn: 'root'
@@ -23,6 +24,12 @@ export class ComuneConfigService {
   postComuneConfig(formData: ComuneConfig) {
     return this.http.post<ComuneConfig>(this.usersUrl + '/comune-config', formData);
 
+  }
+
+  getCountries() {
+    console.log('ddd');
+    this.http.get<INation[]>(this.usersUrl + '/nation-config')
+      .toPromise().then(res => this.list = res as ComuneConfig[]);
   }
 
   refreshList() {

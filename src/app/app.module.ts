@@ -105,6 +105,8 @@ import {ZoneinfosComponent} from './buyinghouse/zoneinfos/zoneinfos.component';
 import {ZoneInfoComponent} from './buyinghouse/zoneinfos/zone-info/zone-info.component';
 import {ZoneInfoListComponent} from './buyinghouse/zoneinfos/zone-info-list/zone-info-list.component';
 import { CountryappComponent } from './countryapp/countryapp.component';
+import { SalepointfilterComponent } from './salepointfilter/salepointfilter.component';
+import {SalepointfolterService} from "./salepointfilter/salepointfolter.service";
 
 // import { ToastrModule } from 'ngx-toastr';
 
@@ -209,6 +211,7 @@ import { CountryappComponent } from './countryapp/countryapp.component';
     ZoneInfoComponent,
     ZoneInfoListComponent,
     CountryappComponent,
+    SalepointfilterComponent,
 
   ],
   imports: [
@@ -226,7 +229,7 @@ import { CountryappComponent } from './countryapp/countryapp.component';
     BrandQuestionService, BrandAnswerService,
     ParameterQuestionService, ParameterAnswerService,
     NationService, RegionService, ProvinceService, ComuneService, CapService, ComuneConfigService,
-    BrandCalculationsService, PriceInfoService],
+    BrandCalculationsService, PriceInfoService, SalepointfolterService],
 
   bootstrap: [AppComponent],
   entryComponents: [SalePointComponent, OfferComponent, UserComponent,
@@ -234,7 +237,7 @@ import { CountryappComponent } from './countryapp/countryapp.component';
     BrandQuestionComponent, BrandAnswerComponent,
     ParameterQuestionComponent, ParameterAnswerComponent,
     NationComponent, RegionComponent, ProvinceComponent, ComuneComponent, CapComponent,
-    ComuneConfigComponent, BrandCalculationComponent, LogisticComponent, PriceInfoComponent, ZoneInfoComponent, CountryappComponent]
+    ComuneConfigComponent, BrandCalculationComponent, LogisticComponent, PriceInfoComponent, ZoneInfoComponent, CountryappComponent, SalepointfilterComponent]
 })
 export class AppModule {
 }
