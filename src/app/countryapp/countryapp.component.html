@@ -6,19 +6,25 @@
         <div class="form-group">
           <select formControlName="country" class="form-control" (change)="onChangeCountry($event.target.value)">
             <option value="">Select country...</option>
-            <option *ngFor="let country of countries" [value]="country.id">{{country.nationName}}</option>
+            <option *ngFor="let country of countries" [value]="country.nationId">{{country.nationName}}</option>
           </select>
         </div>
         <div class="form-group">
           <select formControlName="state" class="form-control" (change)="onChangeState($event.target.value)">
-            <option value="">Select state...</option>
-            <option *ngFor="let state of states" [value]="state.id">{{state.regionName}}</option>
+            <option value="">Select region...</option>
+            <option *ngFor="let state of states" [value]="state.regionId">{{state.regionName}}</option>
           </select>
         </div>
         <div class="form-group">
-          <select formControlName="city" class="form-control">
-            <option value="">Select city...</option>
-            <option *ngFor="let city of cities" [value]="city.id">{{city.provinceName}}</option>
+          <select formControlName="city" class="form-control" (change)="onChangeCity($event.target.value)">
+            <option value="">Select Province...</option>
+            <option *ngFor="let city of cities" [value]="city.provinceId">{{city.provinceName}}</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <select formControlName="comune" class="form-control">
+            <option value="">Select comune...</option>
+            <option *ngFor="let comune of comuni" [value]="comune.comuneId">{{comune.comuneName}}</option>
           </select>
         </div>
       </form>

@@ -26,11 +26,11 @@ export class ComuneConfigService {
 
   }
 
-  getCountries() {
-    console.log('ddd');
-    this.http.get<INation[]>(this.usersUrl + '/nation-config')
-      .toPromise().then(res => this.list = res as ComuneConfig[]);
-  }
+  // getCountries() {
+  //   console.log('ddd');
+  //   this.http.get<INation[]>(this.usersUrl + '/nation-config')
+  //     .toPromise().then(res => this.list = res as INation[]);
+  // }
 
   refreshList() {
     console.log('ddd');

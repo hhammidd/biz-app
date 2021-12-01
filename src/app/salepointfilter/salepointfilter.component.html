@@ -1,0 +1,10 @@
+<div>
+  <label for="country">Country</label>
+  <div class="input-group input-group-sm mb-3">
+    <select [(ngModel)]="selectedCountry.id" (change)="onSelect($event.target)" )>
+      <option value="0">--Select Country</option>
+      <option *ngFor="let country of countries?.countries" [value]="country.id">{{country.name}}</option>
+    </select>
+  </div>
+
+</div>

@@ -1,10 +1,8 @@
-import {Component, Injectable, OnInit} from '@angular/core';
-import {SelectionModel} from '@angular/cdk/collections';
-import {FlatTreeControl} from '@angular/cdk/tree';
-import {Component, Injectable} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 import {CountryappService} from './countryapp.service';
 import {FormControl, FormGroup} from '@angular/forms';
+import {log} from "util";
 
 
 @Component({
@@ -18,6 +16,7 @@ export class CountryappComponent implements OnInit {
   countries: {};
   states: {};
   cities: {};
+  comuni: {};
 
   constructor(private cscService: CountryappService) { }
 
@@ -27,7 +26,9 @@ export class CountryappComponent implements OnInit {
     );
     this.createAccountForm = new FormGroup({
       country: new FormControl(''),
-      state: new FormControl('')
+      state: new FormControl(''),
+      city: new FormControl(''),
+      comune: new FormControl(''),
     });
   }
 
@@ -48,10 +49,24 @@ export class CountryappComponent implements OnInit {
   onChangeState(stateId: number) {
     if (stateId) {
       this.cscService.getProvince(stateId).subscribe(
-        data => this.cities = data
+        data => {
+          this.cities = data;
+          this.comuni = null;
+        }
       );
     } else {
       this.cities = null;
+      this.comuni = null;
+    }
+  }
+
+  onChangeCity(provinceId: number) {
+    if (provinceId) {
+      this.cscService.getComuni(provinceId).subscribe(
+        data => this.comuni = data
+      );
+    } else {
+      this.comuni = null;
     }
   }
 }
