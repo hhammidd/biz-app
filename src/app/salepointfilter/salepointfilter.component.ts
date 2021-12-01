@@ -31,35 +31,35 @@ export class TodoItemFlatNode {
  */
 const TREE_DATA = [
   {
-    name: 'Test 1',
+    name: 'Italy',
     id: 111,
     isChecked: true,
     isPlanType: true,
     claimId: 11111,
     children: [
       {
-        name: 'Sub - Test 1',
+        name: 'Lombardia',
         id: 22,
         isChecked: true,
         isPlanType: true,
         claimId: 777777,
         children: [
           {
-            name: 'Sub - sub - Test 1',
+            name: 'Bergamo',
             id: 33,
             isChecked: false,
             isPlanType: true,
             claimId: 6666666,
           },
           {
-            name: 'Sub - sub - Test 2',
+            name: 'Milano',
             id: 44,
             isChecked: true,
             isPlanType: true,
             claimId: 5555555,
             children: [
               {
-                name: 'Sub - sub - sub - Test 2',
+                name: 'Milano',
                 id: 55,
                 isChecked: true,
                 isPlanType: true,
@@ -71,14 +71,14 @@ const TREE_DATA = [
     ]
   },
   {
-    name: 'Test 2',
+    name: 'Netherlands',
     id: 66,
     isChecked: false,
     isPlanType: true,
     claimId: 33333,
     children: [
       {
-        name: 'Sub - Test 2',
+        name: 'South Holand',
         id: 77,
         isChecked: false,
         isPlanType: true,
