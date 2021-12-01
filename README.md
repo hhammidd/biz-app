@@ -12,3 +12,6 @@
  
 # Pull the image in server
 *  `docker pull hhssaaffii/tech-search:2`
+
+
+* Should be connected to micro-geo app
