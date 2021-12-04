@@ -1,0 +1,48 @@
+{
+  "countries": {
+    "id": 1,
+    "name": "Italy"
+  },
+  "Region": [
+    {
+      "id": 100,
+      "name": "Lombardia"
+    },
+    {
+      "id": 101,
+      "name": "Puglia"
+    }
+  ],
+  "province": [
+    {
+      "id": 1001,
+      "name": "Milan"
+    },
+    {
+      "id": 1002,
+      "name": "Bergamo"
+    }
+  ],
+  "comune": [
+    {
+      "id": 10001,
+      "name": "Milan"
+    },
+    {
+      "id": 10002,
+      "name": "Varese"
+    }
+  ],
+  "zipcode": [
+    {
+      "id": 100001,
+      "name": "3511BZ"
+    },
+    {
+      "id": 100002,
+      "name": "2911CS"
+    }
+  ],
+  "market": "IT",
+  "field": "ie_ev_it"
+}

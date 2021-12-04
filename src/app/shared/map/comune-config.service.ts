@@ -23,7 +23,6 @@ export class ComuneConfigService {
 
   postComuneConfig(formData: ComuneConfig) {
     return this.http.post<ComuneConfig>(this.usersUrl + '/comune-config', formData);
-
   }
 
   // getCountries() {

@@ -1,4 +1,6 @@
+https://www.youtube.com/watch?v=S5dzfuh3t8U&list=PLjC4UKOOcfDTyLPFIjZfTYHkoGJdVCXzs&ab_channel=CodAffection
 --✗ npm install --legacy-peer-deps
+
 * ng serve --port 4201
 * 
 # Push Created Image to remote docker hub

@@ -32,8 +32,9 @@ import {LogisticComponent} from './distribution/logistics/logistic/logistic.comp
 import {BuyinghouseComponent} from './buyinghouse/buyinghouse.component';
 import {PriceinfosComponent} from './buyinghouse/priceinfos/priceinfos.component';
 import {ZoneinfosComponent} from './buyinghouse/zoneinfos/zoneinfos.component';
-import {CountryappComponent} from "./countryapp/countryapp.component";
-import {SalepointfilterComponent} from "./salepointfilter/salepointfilter.component";
+import {CountryappComponent} from './countryapp/countryapp.component';
+import {SalepointfilterComponent} from './salepointfilter/salepointfilter.component';
+import {SpmainsComponent} from "./spmains/spmains.component";
 
 
 const routes: Routes = [
@@ -74,6 +75,8 @@ const routes: Routes = [
   {path: 'zoneinfo', component: ZoneinfosComponent},
 
   {path: 'salepointfilter', component: SalepointfilterComponent},
+  {path: 'sp', component: SpmainsComponent},
+
   {
     path: 'studies', component: StudiesComponent,
     children: [
@@ -118,5 +121,5 @@ export const routingComponents = [
   MapComponent,
   DistributionComponent,
   BuyinghouseComponent,
-  CountryappComponent
+  CountryappComponent,
 ];

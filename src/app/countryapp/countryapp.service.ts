@@ -5,8 +5,8 @@ import {catchError} from 'rxjs/operators';
 import {throwError} from 'rxjs';
 
 import {IRegion} from '../shared/map/region';
-import {IProvince} from "../shared/map/province";
-import {ComuneConfig} from "../shared/map/comuneConfig.model";
+import {IProvince} from '../shared/map/province';
+import {ComuneConfig} from '../shared/map/comuneConfig.model';
 
 
 
@@ -19,7 +19,7 @@ export class CountryappService {
   // private url: string;
 
   constructor(private http: HttpClient) {
-    this.usersUrl = 'http://localhost:8087';
+    this.usersUrl = 'http://localhost:8089';
     // this.usersUrl = '/assets/data/nations.json';
   }
 
@@ -45,7 +45,7 @@ export class CountryappService {
   }
 
   getComuni(provinceId: number) {
-    return this.http.get<ComuneConfig[]>(this.usersUrl + '/comune-config/by-province/1').pipe(
+    return this.http.get<ComuneConfig[]>(this.usersUrl + '/comune-config/by-province/' + provinceId).pipe(
       catchError(this.handleError)
     );
   }
