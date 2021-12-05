@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import {FormControl, FormGroup, Validator, Validators} from '@angular/forms';
+import {FormArray, FormArrayName, FormControl, FormGroup, Validator, Validators} from '@angular/forms';
 import {SalePointGeoWithCombineFilterTest} from '../SalePointGeoWithCombineFilterTest';
 import {HttpClient} from '@angular/common/http';
-import {GeoCombineTo} from "../GeoCombineTo";
+
 
 @Injectable({
   providedIn: 'root'
@@ -24,12 +24,28 @@ export class SpmainService {
   //   comunes: new FormControl([4, 5, 7]),
   // });
 
+
+  regionsChoice = [
+    { id: 3, value: 1},
+    { id: 2, value: 2},
+    { id: 3, value: 3}];
+
+  private geoCombineTo = {};
+
   // containing objject from form
   form: FormGroup = new FormGroup({
     $key: new FormControl(null),
     field: new FormControl('', Validators.required),
     market: new FormControl(''),
-    geoCombineTo: new FormControl(),
+    // geoCombineTo: new FormControl(this.geoCombineTo),
+    geoCombineTo: new FormGroup({
+      regions: new FormControl(null),
+      provinces: new FormControl(null),
+      comunes: new FormControl(null),
+      // regions: new FormArray([]),
+      // provinces: new FormArray([]),
+      // comunes: new FormArray([]),
+    }),
   });
 
 
@@ -51,7 +67,7 @@ export class SpmainService {
   postComuneConfig(form: SalePointGeoWithCombineFilterTest) {
     console.log('url ', this.usersUrl + 'scombine-geo' )
     console.log('cooming from form', form);
-    return this.http.post<SalePointGeoWithCombineFilterTest>(this.usersUrl + 'sale-point-geo/combine-geo', form)
+    return this.http.post<SalePointGeoWithCombineFilterTest>(this.usersUrl + 'sale-point-geo/filter-sale-point-test', form)
       .subscribe();
   }
   // filterSalePoints(salePointGeoWithCombineFilter)

@@ -1,4 +1,5 @@
 <form [formGroup]="service.form" class="normal-form" (submit)="onFilter()">
+  {{ form | json }}
 <!--<form [formGroup]="service.form" class="normal-form">-->
   <!--// Create 2 column form-->
   <mat-grid-list cols="2" rowHeight="500px">
@@ -14,9 +15,37 @@
         <mat-form-field>
           <input formControlName="market" matInput placeholder="market">
         </mat-form-field>
-        <mat-form-field>
-          <input formControlName="geoCombineTo" matInput placeholder="Region Comune Province Id">
+
+        <mat-form-field formGroupName="geoCombineTo">
+          <input formControlName = "regions" matInput placeholder="Region">
         </mat-form-field>
+
+        <mat-form-field formGroupName="geoCombineTo">
+          <input formControlName = "provinces" matInput placeholder="Provinces">
+        </mat-form-field>
+
+        <mat-form-field formGroupName="geoCombineTo">
+          <input formControlName = "comunes" matInput placeholder="Comunes">
+        </mat-form-field>
+
+        <!--<mat-form-field formGroupName="geoCombineTo">-->
+          <!--<input formArray = "regions" matInput placeholder="Region">-->
+        <!--</mat-form-field>-->
+
+        <!--<mat-form-field formGroupName="geoCombineTo">-->
+          <!--<input formArray = "provinces" matInput placeholder="Provinces">-->
+        <!--</mat-form-field>-->
+
+        <!--<mat-form-field formGroupName="geoCombineTo">-->
+          <!--<input formArray = "comunes" matInput placeholder="Comunes">-->
+        <!--</mat-form-field>-->
+
+        <!--<mat-form-field>-->
+          <!--<input [formControl]="form.get('geoCombineTo')" matInput placeholder="Region swws Province Id">-->
+        <!--</mat-form-field>-->
+        <!--<mat-form-field>-->
+          <!--<input [formControl]="form.get('geoCombineTo')" matInput placeholder="Region Comune Province Id">-->
+        <!--</mat-form-field>-->
       </div>
     </mat-grid-tile>
 
