@@ -1,57 +1,36 @@
-<form [formGroup]="service.form" class="normal-form" (submit)="onFilter()">
-  {{ form | json }}
-<!--<form [formGroup]="service.form" class="normal-form">-->
-  <!--// Create 2 column form-->
-  <mat-grid-list cols="2" rowHeight="500px">
+<div class="container text-center">
 
-    <mat-grid-tile>
-      <div class="controles-container">
-        <!--<input type="hidden" fromControlName="$key">-->
-        <input type="hidden" fromControlName="id">
-        <mat-form-field>
-          <input formControlName="field" matInput placeholder="field">
-          <mat-error>This field is mandatory.</mat-error>
-        </mat-form-field>
-        <mat-form-field>
-          <input formControlName="market" matInput placeholder="market">
-        </mat-form-field>
+  <ng-multiselect-dropdown #multiSelect
+                           [placeholder]="'Add Regions'"
+                           [data]="regionDropdownList"
+                           [(ngModel)]="regionSelectedItems"
+                           [settings]="regionDropdownSettings"
+                           (onSelect)="onItemSelect($event)"
+                           (onSelectAll)="onSelectAll($event)"
+  >
 
-        <mat-form-field formGroupName="geoCombineTo">
-          <input formControlName = "regions" matInput placeholder="Region">
-        </mat-form-field>
+  </ng-multiselect-dropdown>
 
-        <mat-form-field formGroupName="geoCombineTo">
-          <input formControlName = "provinces" matInput placeholder="Provinces">
-        </mat-form-field>
+  <h1>My First Heading</h1>
+  <ng-multiselect-dropdown #multiSelect
+                           [placeholder]="'Add Province'"
+                           [data]="regionDropdownList"
+                           [(ngModel)]="regionSelectedItems"
+                           [settings]="regionDropdownSettings"
+                           (onSelect)="onItemSelect($event)"
+                           (onSelectAll)="onSelectAll($event)"
+  >
 
-        <mat-form-field formGroupName="geoCombineTo">
-          <input formControlName = "comunes" matInput placeholder="Comunes">
-        </mat-form-field>
+  </ng-multiselect-dropdown>
+  <h1>My First Heading</h1>
+  <ng-multiselect-dropdown #multiSelect
+                           [placeholder]="'Add Comune'"
+                           [data]="regionDropdownList"
+                           [(ngModel)]="regionSelectedItems"
+                           [settings]="regionDropdownSettings"
+                           (onSelect)="onItemSelect($event)"
+                           (onSelectAll)="onSelectAll($event)"
+  >
 
-        <!--<mat-form-field formGroupName="geoCombineTo">-->
-          <!--<input formArray = "regions" matInput placeholder="Region">-->
-        <!--</mat-form-field>-->
-
-        <!--<mat-form-field formGroupName="geoCombineTo">-->
-          <!--<input formArray = "provinces" matInput placeholder="Provinces">-->
-        <!--</mat-form-field>-->
-
-        <!--<mat-form-field formGroupName="geoCombineTo">-->
-          <!--<input formArray = "comunes" matInput placeholder="Comunes">-->
-        <!--</mat-form-field>-->
-
-        <!--<mat-form-field>-->
-          <!--<input [formControl]="form.get('geoCombineTo')" matInput placeholder="Region swws Province Id">-->
-        <!--</mat-form-field>-->
-        <!--<mat-form-field>-->
-          <!--<input [formControl]="form.get('geoCombineTo')" matInput placeholder="Region Comune Province Id">-->
-        <!--</mat-form-field>-->
-      </div>
-    </mat-grid-tile>
-
-    <div class="button-row">
-      <button mat-raised-button color="primary" type="submit" [disabled]="service.form.invalid">Filter Sale points</button>
-      <button mat-raised-button color="warn" (click)="onClear()">Clear</button>
-    </div>
-  </mat-grid-list>
-</form>
+  </ng-multiselect-dropdown>
+</div>

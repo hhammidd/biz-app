@@ -1,7 +1,11 @@
 import { Injectable } from '@angular/core';
-import {FormArray, FormArrayName, FormControl, FormGroup, Validator, Validators} from '@angular/forms';
+import {FormArray, FormArrayName, FormBuilder, FormControl, FormGroup, Validator, Validators} from '@angular/forms';
 import {SalePointGeoWithCombineFilterTest} from '../SalePointGeoWithCombineFilterTest';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpErrorResponse} from '@angular/common/http';
+import {RegionsDto} from '../RegionsDto';
+import {ComuneConfig} from '../../shared/map/comuneConfig.model';
+import {catchError, map} from 'rxjs/operators';
+import {throwError} from 'rxjs';
 
 
 @Injectable({
@@ -9,70 +13,48 @@ import {HttpClient} from '@angular/common/http';
 })
 export class SpmainService {
 
+  region: RegionsDto;
+  regionList: RegionsDto[] = [];
 
   // private GeoCombineTo: null;
   private usersUrl: string;
+  private geoUrl: string;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private fb: FormBuilder) {
     // this.usersUrl = 'http://94.130.228.242:31430/';
     this.usersUrl = 'http://localhost:8085/';
+    this.geoUrl = 'http://localhost:8089/';
   }
 
-  // geoCombineTo: FormGroup = new FormGroup({
-  //   regions: new FormControl([1, 2]),
-  //   provinces: new FormControl([3, 4, 5]),
-  //   comunes: new FormControl([4, 5, 7]),
-  // });
+  url_ = '/assets/data/regions.json';
 
-
-  regionsChoice = [
-    { id: 3, value: 1},
-    { id: 2, value: 2},
-    { id: 3, value: 3}];
-
-  private geoCombineTo = {};
-
-  // containing objject from form
-  form: FormGroup = new FormGroup({
-    $key: new FormControl(null),
-    field: new FormControl('', Validators.required),
-    market: new FormControl(''),
-    // geoCombineTo: new FormControl(this.geoCombineTo),
-    geoCombineTo: new FormGroup({
-      regions: new FormControl(null),
-      provinces: new FormControl(null),
-      comunes: new FormControl(null),
-      // regions: new FormArray([]),
-      // provinces: new FormArray([]),
-      // comunes: new FormArray([]),
-    }),
-  });
-
-
-
-
-  initializeFormGroup() {
-    this.form.setValue({
-       $key: null,
-      field: 'EV',
-      market: 'Italy',
-      geoCombineTo: {
-         regions: [2811, 2816],
-        provinces: [19775, 15969],
-        comunes: [35993, 359934]
-      },
-    });
+  getRegions() {
+    // return this.http.get<RegionsDto[]>(this.url_ );
+     return this.http.get<RegionsDto[]>(this.geoUrl + '/region-config/names');
   }
 
-  postComuneConfig(form: SalePointGeoWithCombineFilterTest) {
-    console.log('url ', this.usersUrl + 'scombine-geo' )
-    console.log('cooming from form', form);
-    return this.http.post<SalePointGeoWithCombineFilterTest>(this.usersUrl + 'sale-point-geo/filter-sale-point-test', form)
-      .subscribe();
+  protected handleError(error: HttpErrorResponse) {
+    if (error.error instanceof ErrorEvent) {
+      // A client-side or network error occurred. Handle it accordingly.
+      console.error('An error occurred:', error.error.message);
+    } else {
+      // The backend returned an unsuccessful response code.
+      // The response body may contain clues as to what went wrong,
+      console.error(`Backend returned code ${error.status}, ` + `body was: ${error.error}`);
+    }
+    // return an observable with a user-facing error message
+    return throwError('Something bad happened. Please try again later.');
   }
-  // filterSalePoints(salePointGeoWithCombineFilter)
-  doSalePointFilter(salePointGeoWithCombineFilterTest) {
-    console.log('dofiletr', salePointGeoWithCombineFilterTest);
-    this.postComuneConfig(salePointGeoWithCombineFilterTest);
+
+  getRegionss() {
+    return [
+      { id: 1, item_text: 'Dehli' },
+      { id: 2, item_text: 'Dehli1' },
+      { id: 3, item_text: 'Dehli2' },
+      { id: 4, item_text: 'Dehli3' },
+      { id: 5, item_text: 'Dehli4' },
+      { id: 6, item_text: 'Dehli5' },
+    ];
   }
 }
+

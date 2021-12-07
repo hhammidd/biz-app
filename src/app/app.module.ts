@@ -109,6 +109,7 @@ import { SalepointfilterComponent } from './salepointfilter/salepointfilter.comp
 import {SalepointfolterService} from "./salepointfilter/salepointfolter.service";
 import { SpmainsComponent } from './spmains/spmains.component';
 import {SpmainService} from "./spmains/shared/spmain.service";
+import {NgMultiSelectDropDownModule} from "ng-multiselect-dropdown";
 
 // import { ToastrModule } from 'ngx-toastr';
 
@@ -224,7 +225,8 @@ import {SpmainService} from "./spmains/shared/spmain.service";
     AppRoutingModule,
     BrowserAnimationsModule,
     // ToastrModule.forRoot(),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgMultiSelectDropDownModule.forRoot()
   ],
   providers: [SalePointService, OfferService, UserService,
     RoleService, PermissionService, ProductService,
