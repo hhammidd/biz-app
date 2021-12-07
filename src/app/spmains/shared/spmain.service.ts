@@ -6,6 +6,8 @@ import {RegionsDto} from '../RegionsDto';
 import {ComuneConfig} from '../../shared/map/comuneConfig.model';
 import {catchError, map} from 'rxjs/operators';
 import {throwError} from 'rxjs';
+import {ProvinceDto} from "../ProvinceDto";
+import {ComuneDto} from "../ComuneDto";
 
 
 @Injectable({
@@ -26,12 +28,23 @@ export class SpmainService {
     this.geoUrl = 'http://localhost:8089/';
   }
 
-  url_ = '/assets/data/regions.json';
+  // url_ = '/assets/data/regions.json';
 
   getRegions() {
     // return this.http.get<RegionsDto[]>(this.url_ );
      return this.http.get<RegionsDto[]>(this.geoUrl + '/region-config/names');
   }
+
+  getProvinces() {
+    // return this.http.get<RegionsDto[]>(this.url_ );
+    return this.http.get<ProvinceDto[]>(this.geoUrl + '/province-config/names');
+  }
+
+  getComunes() {
+    // return this.http.get<RegionsDto[]>(this.url_ );
+    return this.http.get<ComuneDto[]>(this.geoUrl + '/comune-config/names');
+  }
+
 
   protected handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {

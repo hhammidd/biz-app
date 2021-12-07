@@ -11,23 +11,23 @@
 
   </ng-multiselect-dropdown>
 
-  <h1>My First Heading</h1>
+  <h1>==============================================</h1>
   <ng-multiselect-dropdown #multiSelect
                            [placeholder]="'Add Province'"
-                           [data]="regionDropdownList"
-                           [(ngModel)]="regionSelectedItems"
-                           [settings]="regionDropdownSettings"
+                           [data]="provinceDropdownList"
+                           [(ngModel)]="provinceSelectedItems"
+                           [settings]="provinceDropdownSettings"
                            (onSelect)="onItemSelect($event)"
                            (onSelectAll)="onSelectAll($event)"
   >
 
   </ng-multiselect-dropdown>
-  <h1>My First Heading</h1>
+  <h1>===================================================</h1>
   <ng-multiselect-dropdown #multiSelect
                            [placeholder]="'Add Comune'"
-                           [data]="regionDropdownList"
-                           [(ngModel)]="regionSelectedItems"
-                           [settings]="regionDropdownSettings"
+                           [data]="comuneDropdownList"
+                           [(ngModel)]="comuneSelectedItems"
+                           [settings]="comuneDropdownSettings"
                            (onSelect)="onItemSelect($event)"
                            (onSelectAll)="onSelectAll($event)"
   >
