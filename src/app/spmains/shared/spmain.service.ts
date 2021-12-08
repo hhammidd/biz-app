@@ -23,7 +23,7 @@ export class SpmainService {
   private usersUrl: string;
   private geoUrl: string;
 
-  constructor(private http: HttpClient, private fb: FormBuilder) {
+  constructor(private http: HttpClient) {
     // this.usersUrl = 'http://94.130.228.242:31430/';
     this.usersUrl = 'http://localhost:8085/';
     this.geoUrl = 'http://localhost:8089/';
@@ -48,7 +48,9 @@ export class SpmainService {
 
 
   salePointsOnGeo(formData: SalePointGeoBeta) {
-    return this.http.post<SalePointGeoBeta>(this.usersUrl + '/sale-point-geo/combine-geo-beta', formData);
+    console.log('form data filter : ', formData);
+    console.log('URL : ', this.usersUrl + 'sale-point-geo/combine-geo-beta');
+    return this.http.post<SalePointGeoBeta>(this.usersUrl + 'sale-point-geo/combine-geo-beta', formData).subscribe();
   }
 }
 

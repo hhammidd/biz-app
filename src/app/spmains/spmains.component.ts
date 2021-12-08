@@ -88,6 +88,7 @@ export class SpmainsComponent implements OnInit {
       defaultOpen: false,
     };
     this.setForm();
+    this.service.salePointsOnGeo(this.formGroup.value);
   }
 
   public setForm() {
@@ -101,6 +102,10 @@ export class SpmainsComponent implements OnInit {
     });
     this.loadContent = true;
   }
+
+  // private salePointsOnGeo(formGroup: FormGroup) {
+  //   this.service.salePointsOnGeo(this.formGroup.value);
+  // }
 
   get f() {
     return this.formGroup.controls;
@@ -152,4 +157,6 @@ export class SpmainsComponent implements OnInit {
   public onDeSelectAll(items: any) {
     console.log(items);
   }
+
+
 }
