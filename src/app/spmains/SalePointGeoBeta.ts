@@ -2,7 +2,7 @@ import {RegionsDto} from './RegionsDto';
 import {ProvinceDto} from './ProvinceDto';
 import {ComuneDto} from './ComuneDto';
 
-export class SalePointGeoBeta {
+export interface SalePointGeoBeta {
   id: number;
   regions: RegionsDto[];
   provinces: ProvinceDto[];

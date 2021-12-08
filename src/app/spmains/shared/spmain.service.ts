@@ -4,6 +4,8 @@ import {HttpClient} from '@angular/common/http';
 import {RegionsDto} from '../RegionsDto';
 import {ProvinceDto} from '../ProvinceDto';
 import {ComuneDto} from '../ComuneDto';
+
+import {SalePointGeoBeta} from '../SalePointGeoBeta';
 // import {SalePointGeoBeta} from '../SalePointGeoBeta';
 
 
@@ -14,6 +16,8 @@ export class SpmainService {
 
   region: RegionsDto;
   regionList: RegionsDto[] = [];
+
+  salePointGeoBeta; SalePointGeoBeta;
 
   // private GeoCombineTo: null;
   private usersUrl: string;
@@ -43,16 +47,8 @@ export class SpmainService {
   }
 
 
-
-  getRegionss() {
-    return [
-      { id: 1, item_text: 'Dehli' },
-      { id: 2, item_text: 'Dehli1' },
-      { id: 3, item_text: 'Dehli2' },
-      { id: 4, item_text: 'Dehli3' },
-      { id: 5, item_text: 'Dehli4' },
-      { id: 6, item_text: 'Dehli5' },
-    ];
+  salePointsOnGeo(formData: SalePointGeoBeta) {
+    return this.http.post<SalePointGeoBeta>(this.usersUrl + '/sale-point-geo/combine-geo-beta', formData);
   }
 }
 

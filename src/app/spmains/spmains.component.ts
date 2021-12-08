@@ -96,7 +96,7 @@ export class SpmainsComponent implements OnInit {
       regions: new FormControl(this.regionDropdownList),
       provinces: new FormControl(this.provinceDropdownList),
       comunes: new FormControl(this.comuneDropdownList),
-      market: new FormControl('EV'), // Todo fill later
+      market: new FormControl('ITALY'), // Todo fill later
       field: new FormControl('EV'), // Todo fill later
     });
     this.loadContent = true;
