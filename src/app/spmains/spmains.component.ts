@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import {SpmainService} from './shared/spmain.service';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {IDropdownSettings} from 'ng-multiselect-dropdown';
-import {RegionsDto} from "./RegionsDto";
-import {ProvinceDto} from "./ProvinceDto";
-import {ComuneDto} from "./ComuneDto";
+import {RegionsDto} from './RegionsDto';
+import {ProvinceDto} from './ProvinceDto';
+import {ComuneDto} from './ComuneDto';
 
 @Component({
   selector: 'app-spmains',
@@ -87,13 +87,29 @@ export class SpmainsComponent implements OnInit {
       showSelectedItemsAtTop: false,
       defaultOpen: false,
     };
+    this.setForm();
   }
 
   public setForm() {
     this.formGroup = new FormGroup({
-      name: new FormControl(this.regionDropdownList, Validators.required),
+      region: new FormControl(this.regionDropdownList),
+      province: new FormControl(this.provinceDropdownList),
+      comune: new FormControl(this.comuneDropdownList),
+
     });
     this.loadContent = true;
+  }
+
+  get f() {
+    return this.formGroup.controls;
+  }
+
+  public save() {
+    if (this.formGroup.invalid) {
+      this.formGroup.markAllAsTouched();
+      return;
+    }
+    console.log(this.formGroup.value);
   }
 
   public onFilterChange(item: any) {
@@ -103,16 +119,34 @@ export class SpmainsComponent implements OnInit {
     console.log(item);
   }
 
-  public onItemSelect(item: any) {
-    console.log(item);
+  public onRegionSelect(regionj: any) {
+    console.log(regionj);
   }
+
+  public onProvinceSelect(provincej: any) {
+    console.log(provincej);
+  }
+
+  public onComuneSelect(comunej: any) {
+    console.log(comunej);
+  }
+
   public onDeSelect(item: any) {
     console.log(item);
   }
 
-  public onSelectAll(items: any) {
-    console.log(items);
+  public onSelectAllRegion(regions: any) {
+    console.log(regions);
   }
+
+  public onSelectAllProvines(provinecs: any) {
+    console.log(provinecs);
+  }
+
+  public onSelectAllComunes(comunes: any) {
+    console.log(comunes);
+  }
+
   public onDeSelectAll(items: any) {
     console.log(items);
   }
