@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {SpmainService} from './shared/spmain.service';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {IDropdownSettings} from 'ng-multiselect-dropdown';
@@ -14,7 +14,8 @@ import {ComuneDto} from './ComuneDto';
 export class SpmainsComponent implements OnInit {
 
 
-  constructor(private service: SpmainService, private fb: FormBuilder) { }
+  constructor(private service: SpmainService, private fb: FormBuilder) {
+  }
 
   regionDropdownList: RegionsDto[] = [];
   regionSelectedItems = [];
@@ -32,12 +33,11 @@ export class SpmainsComponent implements OnInit {
   public loadContent: boolean = false;
 
   ngOnInit() {
-    this.service.getRegions().subscribe(res => this.regionDropdownList = res );
-    this.service.getProvinces().subscribe(res => this.provinceDropdownList = res );
-    this.service.getComunes().subscribe(res => this.comuneDropdownList = res );
-    this.regionSelectedItems = [
-    ];
-    this.regionDropdownSettings =  {
+    this.service.getRegions().subscribe(res => this.regionDropdownList = res);
+    this.service.getProvinces().subscribe(res => this.provinceDropdownList = res);
+    this.service.getComunes().subscribe(res => this.comuneDropdownList = res);
+    this.regionSelectedItems = [];
+    this.regionDropdownSettings = {
       singleSelection: false,
       idField: 'regionId',
       textField: 'regionName',
@@ -54,7 +54,7 @@ export class SpmainsComponent implements OnInit {
       defaultOpen: false,
     };
 
-    this.provinceDropdownSettings =  {
+    this.provinceDropdownSettings = {
       singleSelection: false,
       idField: 'provinceId',
       textField: 'provinceName',
@@ -71,7 +71,7 @@ export class SpmainsComponent implements OnInit {
       defaultOpen: false,
     };
 
-    this.comuneDropdownSettings =  {
+    this.comuneDropdownSettings = {
       singleSelection: false,
       idField: 'comuneId',
       textField: 'comuneName',
@@ -88,7 +88,6 @@ export class SpmainsComponent implements OnInit {
       defaultOpen: false,
     };
     this.setForm();
-    this.service.salePointsOnGeo(this.formGroup.value);
   }
 
   public setForm() {
@@ -103,9 +102,6 @@ export class SpmainsComponent implements OnInit {
     this.loadContent = true;
   }
 
-  // private salePointsOnGeo(formGroup: FormGroup) {
-  //   this.service.salePointsOnGeo(this.formGroup.value);
-  // }
 
   get f() {
     return this.formGroup.controls;
@@ -116,12 +112,15 @@ export class SpmainsComponent implements OnInit {
       this.formGroup.markAllAsTouched();
       return;
     }
+
     console.log(this.formGroup.value);
+    this.service.salePointsOnGeo(this.formGroup.value);
   }
 
   public onFilterChange(item: any) {
     console.log(item);
   }
+
   public onDropDownClose(item: any) {
     console.log(item);
   }
