@@ -92,10 +92,12 @@ export class SpmainsComponent implements OnInit {
 
   public setForm() {
     this.formGroup = new FormGroup({
-      region: new FormControl(this.regionDropdownList),
-      province: new FormControl(this.provinceDropdownList),
-      comune: new FormControl(this.comuneDropdownList),
-
+      id: new FormControl(1),
+      regions: new FormControl(this.regionDropdownList),
+      provinces: new FormControl(this.provinceDropdownList),
+      comunes: new FormControl(this.comuneDropdownList),
+      market: new FormControl('EV'), // Todo fill later
+      field: new FormControl('EV'), // Todo fill later
     });
     this.loadContent = true;
   }

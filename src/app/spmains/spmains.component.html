@@ -4,7 +4,7 @@
   <ng-multiselect-dropdown #multiSelect
                            [placeholder]="'Add Regions'"
                            [data]="regionDropdownList"
-                           [formControl]="f.region"
+                           [formControl]="f.regions"
                            [(ngModel)]="regionSelectedItems"
                            [settings]="regionDropdownSettings"
                            (onDeSelect)="onDeSelect($event)"
@@ -18,7 +18,7 @@
   <ng-multiselect-dropdown #multiSelect
                            [placeholder]="'Add Province'"
                            [data]="provinceDropdownList"
-                           [formControl]="f.province"
+                           [formControl]="f.provinces"
                            [(ngModel)]="provinceSelectedItems"
                            [settings]="provinceDropdownSettings"
                            (onSelect)="onProvinceSelect($event)"
@@ -30,7 +30,7 @@
   <ng-multiselect-dropdown #multiSelect
                            [placeholder]="'Add Comune'"
                            [data]="comuneDropdownList"
-                           [formControl]="f.comune"
+                           [formControl]="f.comunes"
                            [(ngModel)]="comuneSelectedItems"
                            [settings]="comuneDropdownSettings"
                            (onSelect)="onComuneSelect($event)"
