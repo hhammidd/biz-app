@@ -44,3 +44,18 @@
 
   </form>
 </div>
+
+<table class="table table-hover">
+  <thead>
+  <td>name</td>
+  <td>field</td>
+  <td>comune</td>
+  </thead>
+  <tbody>
+  <tr *ngFor="let salePointTo of service.salePointTos">
+    <td (click)="populateForm(salePointTo)">{{salePointTo.fieldCode}}</td>
+    <td (click)="populateForm(salePointTo)">{{salePointTo.name}}</td>
+    <td (click)="populateForm(salePointTo)">{{salePointTo.comune}}</td>
+    <td><button (click)="onDelete(salePointTo.id)" class="btn btn-sm btn-outline-danger">X</button></td>
+  </tr>
+</table>

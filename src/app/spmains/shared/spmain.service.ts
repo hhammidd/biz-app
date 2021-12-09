@@ -1,12 +1,12 @@
 import {Injectable} from '@angular/core';
-import {FormBuilder} from '@angular/forms';
 import {HttpClient} from '@angular/common/http';
 import {RegionsDto} from '../RegionsDto';
 import {ProvinceDto} from '../ProvinceDto';
 import {ComuneDto} from '../ComuneDto';
+import {SalePointsInfoTo} from '../SalePointsInfoTo';
+import {Observable} from 'rxjs';
+import {SalePointTo} from "../SalePointTo";
 
-import {SalePointGeoBeta} from '../SalePointGeoBeta';
-// import {SalePointGeoBeta} from '../SalePointGeoBeta';
 
 
 @Injectable({
@@ -17,7 +17,7 @@ export class SpmainService {
   region: RegionsDto;
   regionList: RegionsDto[] = [];
 
-  salePointGeoBeta; SalePointGeoBeta;
+  salePointTos: SalePointTo[];
 
   // private GeoCombineTo: null;
   private usersUrl: string;
@@ -47,10 +47,16 @@ export class SpmainService {
   }
 
 
-  salePointsOnGeo(formData: SalePointGeoBeta) {
+  salePointsOnGeo(formData: SalePointsInfoTo) {
     console.log('form data filter : ', formData);
     console.log('URL : ', this.usersUrl + 'sale-point-geo/combine-geo-beta');
-    return this.http.post<SalePointGeoBeta>(this.usersUrl + 'sale-point-geo/combine-geo-beta', formData).subscribe();
+
+    return this.http.post<SalePointsInfoTo>(this.usersUrl + 'sale-point-geo/filter-sale-point-test', formData)
+      .subscribe( data => {
+        console.log('data from backend: ' , data);
+        this.salePointTos = data.salePointTos as SalePointTo[];
+        console.log('data after map: ', this.salePointTos);
+      });
   }
 }
 

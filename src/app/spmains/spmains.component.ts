@@ -5,6 +5,7 @@ import {IDropdownSettings} from 'ng-multiselect-dropdown';
 import {RegionsDto} from './RegionsDto';
 import {ProvinceDto} from './ProvinceDto';
 import {ComuneDto} from './ComuneDto';
+import {SalePointsInfoTo} from "./SalePointsInfoTo";
 
 @Component({
   selector: 'app-spmains',
@@ -31,6 +32,8 @@ export class SpmainsComponent implements OnInit {
 
   public formGroup: FormGroup;
   public loadContent: boolean = false;
+
+  salePointsInfoTo: SalePointsInfoTo;
 
   ngOnInit() {
     this.service.getRegions().subscribe(res => this.regionDropdownList = res);
@@ -115,6 +118,7 @@ export class SpmainsComponent implements OnInit {
 
     console.log(this.formGroup.value);
     this.service.salePointsOnGeo(this.formGroup.value);
+
   }
 
   public onFilterChange(item: any) {
