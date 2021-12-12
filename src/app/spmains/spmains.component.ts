@@ -6,6 +6,10 @@ import {RegionsDto} from './RegionsDto';
 import {ProvinceDto} from './ProvinceDto';
 import {ComuneDto} from './ComuneDto';
 import {SalePointsInfoTo} from "./SalePointsInfoTo";
+import {MatDialog, MatDialogConfig, MatTableDataSource} from "@angular/material";
+import {UserComponent} from "../users/user/user.component";
+import {GeofilteringComponent} from "./geofiltering/geofiltering.component";
+import {SalePointTo} from "./SalePointTo";
 
 @Component({
   selector: 'app-spmains',
@@ -15,7 +19,13 @@ import {SalePointsInfoTo} from "./SalePointsInfoTo";
 export class SpmainsComponent implements OnInit {
 
 
-  constructor(private service: SpmainService, private fb: FormBuilder) {
+  constructor(private service: SpmainService, private dialog: MatDialog) {
+  }
+
+
+
+  get f() {
+    return this.formGroup.controls;
   }
 
   regionDropdownList: RegionsDto[] = [];
@@ -34,6 +44,10 @@ export class SpmainsComponent implements OnInit {
   public loadContent: boolean = false;
 
   salePointsInfoTo: SalePointsInfoTo;
+  salePointTos: SalePointTo[];
+
+  // displayedColumns: string[] = ['name', 'province', 'comune', 'cap', 'tel', 'fieldCode'];
+  displayedColumns: string[] = ['name', 'province', 'comune', 'cap', 'tel', 'fieldCode'];
 
   ngOnInit() {
     this.service.getRegions().subscribe(res => this.regionDropdownList = res);
@@ -104,12 +118,6 @@ export class SpmainsComponent implements OnInit {
     });
     this.loadContent = true;
   }
-
-
-  get f() {
-    return this.formGroup.controls;
-  }
-
   public save() {
     if (this.formGroup.invalid) {
       this.formGroup.markAllAsTouched();
@@ -119,6 +127,14 @@ export class SpmainsComponent implements OnInit {
     console.log(this.formGroup.value);
     this.service.salePointsOnGeo(this.formGroup.value);
 
+  }
+
+  onCreate() {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    dialogConfig.width = '60%';
+    this.dialog.open(GeofilteringComponent, dialogConfig);
   }
 
   public onFilterChange(item: any) {

@@ -6,6 +6,9 @@ import {ComuneDto} from '../ComuneDto';
 import {SalePointsInfoTo} from '../SalePointsInfoTo';
 import {Observable} from 'rxjs';
 import {SalePointTo} from "../SalePointTo";
+import {IComune} from "../../shared/map/comune";
+import {MatTableDataSource} from "@angular/material";
+import {ICap} from "../../shared/map/cap";
 
 
 
@@ -18,6 +21,11 @@ export class SpmainService {
   regionList: RegionsDto[] = [];
 
   salePointTos: SalePointTo[];
+
+  // salePointTos: SalePointTo[] = [
+  //   {id: 1, fieldCode: 'EV', name: 'bla', geoId: 2, cap: '1', comune: 'ww',
+  //     province: 'wdw', country: 'adasd', tel: '23232', psw: 'wsw', username: 'qw', coords: 'wq'}
+  // ];
 
   // private GeoCombineTo: null;
   private usersUrl: string;

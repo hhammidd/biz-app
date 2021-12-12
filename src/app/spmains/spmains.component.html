@@ -1,61 +1,125 @@
-<div *ngIf="loadContent" class="container">
-  <form [formGroup]="formGroup" (ngSubmit)="save()" (reset)="resetForm()">
+<!--<div class="search-div">-->
+  <!--<button mat-raised-button (click)="onCreate()">-->
+    <!--<mat-icon>add</mat-icon>Create-->
+  <!--</button>-->
+  <!--<mat-form-field class="search-form-field" floatLabel="never">-->
+    <!--<input (keyup)="applyFilter($event.target.value)" placeholder="Search" autocomplete="off" matInput placeholder="Filter">-->
+  <!--</mat-form-field>-->
+<!--</div>-->
+<!--<div *ngIf="loadContent" class="container">-->
+  <!--<form [formGroup]="formGroup" (ngSubmit)="save()" (reset)="resetForm()">-->
 
-  <ng-multiselect-dropdown #multiSelect
-                           [placeholder]="'Add Regions'"
-                           [data]="regionDropdownList"
-                           [formControl]="f.regions"
-                           [(ngModel)]="regionSelectedItems"
-                           [settings]="regionDropdownSettings"
-                           (onDeSelect)="onDeSelect($event)"
-                           (onSelect)="onRegionSelect($event)"
-                           (onSelectAll)="onSelectAllRegion($event)"
-  >
+    <!--<br/> <br/>-->
 
-  </ng-multiselect-dropdown>
+    <!--<ng-multiselect-dropdown #multiSelect-->
+                             <!--[placeholder]="'Add Regions'"-->
+                             <!--[data]="regionDropdownList"-->
+                             <!--[formControl]="f.regions"-->
+                             <!--[(ngModel)]="regionSelectedItems"-->
+                             <!--[settings]="regionDropdownSettings"-->
+                             <!--(onDeSelect)="onDeSelect($event)"-->
+                             <!--(onSelect)="onRegionSelect($event)"-->
+                             <!--(onSelectAll)="onSelectAllRegion($event)"-->
+    <!--&gt;-->
 
-  <h1>==============================================</h1>
-  <ng-multiselect-dropdown #multiSelect
-                           [placeholder]="'Add Province'"
-                           [data]="provinceDropdownList"
-                           [formControl]="f.provinces"
-                           [(ngModel)]="provinceSelectedItems"
-                           [settings]="provinceDropdownSettings"
-                           (onSelect)="onProvinceSelect($event)"
-                           (onSelectAll)="onSelectAllProvines($event)"
-  >
+    <!--</ng-multiselect-dropdown>-->
+    <!--<br/> <br/>-->
+    <!--<ng-multiselect-dropdown #multiSelect-->
+                             <!--[placeholder]="'Add Province'"-->
+                             <!--[data]="provinceDropdownList"-->
+                             <!--[formControl]="f.provinces"-->
+                             <!--[(ngModel)]="provinceSelectedItems"-->
+                             <!--[settings]="provinceDropdownSettings"-->
+                             <!--(onSelect)="onProvinceSelect($event)"-->
+                             <!--(onSelectAll)="onSelectAllProvines($event)"-->
+    <!--&gt;-->
 
-  </ng-multiselect-dropdown>
-  <h1>===================================================</h1>
-  <ng-multiselect-dropdown #multiSelect
-                           [placeholder]="'Add Comune'"
-                           [data]="comuneDropdownList"
-                           [formControl]="f.comunes"
-                           [(ngModel)]="comuneSelectedItems"
-                           [settings]="comuneDropdownSettings"
-                           (onSelect)="onComuneSelect($event)"
-                           (onSelectAll)="onSelectAllComunes($event)"
-  >
+    <!--</ng-multiselect-dropdown>-->
+    <!--<br/> <br/>-->
+    <!--<ng-multiselect-dropdown #multiSelect-->
+                             <!--[placeholder]="'Add Comune'"-->
+                             <!--[data]="comuneDropdownList"-->
+                             <!--[formControl]="f.comunes"-->
+                             <!--[(ngModel)]="comuneSelectedItems"-->
+                             <!--[settings]="comuneDropdownSettings"-->
+                             <!--(onSelect)="onComuneSelect($event)"-->
+                             <!--(onSelectAll)="onSelectAllComunes($event)"-->
+    <!--&gt;-->
 
-  </ng-multiselect-dropdown>
-    <br/> <br/>
+    <!--</ng-multiselect-dropdown>-->
+    <!--<br/> <br/>-->
 
-    <input type="submit" value="Submit"> | <input type="reset" value="Reset"> | <input type="button" value="Toggle Select All" (click)="multiSelect.toggleSelectAll()">
+    <!--<input type="submit" value="Submit"> | <input type="reset" value="Reset"> | <input type="button" value="Toggle Select All" (click)="multiSelect.toggleSelectAll()">-->
 
-  </form>
-</div>
+  <!--</form>-->
 
-<table class="table table-hover">
-  <thead>
-  <td>name</td>
-  <td>field</td>
-  <td>comune</td>
-  </thead>
-  <tbody>
-  <tr *ngFor="let salePointTo of service.salePointTos">
-    <td (click)="populateForm(salePointTo)">{{salePointTo.fieldCode}}</td>
-    <td (click)="populateForm(salePointTo)">{{salePointTo.name}}</td>
-    <td (click)="populateForm(salePointTo)">{{salePointTo.comune}}</td>
-    <td><button (click)="onDelete(salePointTo.id)" class="btn btn-sm btn-outline-danger">X</button></td>
-  </tr>
-</table>
+<!--<table class="table table-hover">-->
+  <!--<thead>-->
+  <!--<td>name</td>-->
+  <!--<td>province</td>-->
+  <!--<td>comune</td>-->
+  <!--<td>cap</td>-->
+  <!--<td>tel</td>-->
+  <!--<td>fieldCode</td>-->
+  <!--<td>Address</td>-->
+  <!--</thead>-->
+  <!--<tbody>-->
+  <!--<tr *ngFor="let salePointTo of service.salePointTos">-->
+    <!--<td (click)="populateForm(salePointTo)">{{salePointTo.name}}</td>-->
+    <!--<td (click)="populateForm(salePointTo)">{{salePointTo.province}}</td>-->
+    <!--<td (click)="populateForm(salePointTo)">{{salePointTo.comune}}</td>-->
+    <!--<td (click)="populateForm(salePointTo)">{{salePointTo.cap}}</td>-->
+    <!--<td (click)="populateForm(salePointTo)">{{salePointTo.tel}}</td>-->
+    <!--<td (click)="populateForm(salePointTo)">{{salePointTo.fieldCode}}</td>-->
+    <!--<td (click)="populateForm(salePointTo)">Address</td>-->
+    <!--<td><button (click)="onDelete(salePointTo.id)" class="btn btn-sm btn-outline-danger">X</button></td>-->
+  <!--</tr>-->
+<!--</table>-->
+
+
+<mat-table [dataSource]="service.salePointTos" matSort class="mat-elevation-z8">
+
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> name </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="province">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> province </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.province}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="comune">
+    <mat-header-cell *matHeaderCellDef> comune </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.comune}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="cap">
+    <mat-header-cell *matHeaderCellDef> cap </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.cap}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="tel">
+    <mat-header-cell *matHeaderCellDef> tel </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.tel}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="fieldCode">
+    <mat-header-cell *matHeaderCellDef> fieldCode </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.fieldCode}} </mat-cell>
+  </ng-container>
+
+
+  <ng-container matColumnDef="actions">
+    <mat-header-cell *matHeaderCellDef></mat-header-cell>
+    <mat-cell *matCellDef="let row">
+      <button mat-icon-button (click)="onEdit(row)"><mat-icon>launch</mat-icon></button>
+      <button mat-icon-button color="warn" (click)="onDelete(row.$key)"><mat-icon>delete_outline</mat-icon></button>
+    </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+<mat-paginator [pageSizeOptions]="[2, 10, 25, 100]" [pageSize]="5" showFirstLastButtons></mat-paginator>
+

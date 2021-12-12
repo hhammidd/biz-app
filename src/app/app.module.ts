@@ -110,6 +110,8 @@ import {SalepointfolterService} from "./salepointfilter/salepointfolter.service"
 import { SpmainsComponent } from './spmains/spmains.component';
 import {SpmainService} from "./spmains/shared/spmain.service";
 import {NgMultiSelectDropDownModule} from "ng-multiselect-dropdown";
+import { GeofilteringComponent } from './spmains/geofiltering/geofiltering.component';
+import { SpmaincontainerComponent } from './spmains/spmaincontainer/spmaincontainer.component';
 
 // import { ToastrModule } from 'ngx-toastr';
 
@@ -216,6 +218,8 @@ import {NgMultiSelectDropDownModule} from "ng-multiselect-dropdown";
     CountryappComponent,
     SalepointfilterComponent,
     SpmainsComponent,
+    GeofilteringComponent,
+    SpmaincontainerComponent,
   ],
   imports: [
     BrowserModule,
@@ -241,7 +245,7 @@ import {NgMultiSelectDropDownModule} from "ng-multiselect-dropdown";
     BrandQuestionComponent, BrandAnswerComponent,
     ParameterQuestionComponent, ParameterAnswerComponent,
     NationComponent, RegionComponent, ProvinceComponent, ComuneComponent, CapComponent,
-    ComuneConfigComponent, BrandCalculationComponent, LogisticComponent, PriceInfoComponent, ZoneInfoComponent, CountryappComponent, SalepointfilterComponent, SpmainsComponent]
+    ComuneConfigComponent, BrandCalculationComponent, LogisticComponent, PriceInfoComponent, ZoneInfoComponent, CountryappComponent, SalepointfilterComponent, SpmainsComponent, GeofilteringComponent, SpmaincontainerComponent]
 })
 export class AppModule {
 }

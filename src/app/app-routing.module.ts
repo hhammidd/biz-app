@@ -35,6 +35,7 @@ import {ZoneinfosComponent} from './buyinghouse/zoneinfos/zoneinfos.component';
 import {CountryappComponent} from './countryapp/countryapp.component';
 import {SalepointfilterComponent} from './salepointfilter/salepointfilter.component';
 import {SpmainsComponent} from "./spmains/spmains.component";
+import {SpmaincontainerComponent} from "./spmains/spmaincontainer/spmaincontainer.component";
 
 
 const routes: Routes = [
@@ -75,7 +76,7 @@ const routes: Routes = [
   {path: 'zoneinfo', component: ZoneinfosComponent},
 
   {path: 'salepointfilter', component: SalepointfilterComponent},
-  {path: 'sp', component: SpmainsComponent},
+  {path: 'sp', component: SpmaincontainerComponent},
 
   {
     path: 'studies', component: StudiesComponent,
