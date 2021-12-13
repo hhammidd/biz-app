@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {NgForm} from '@angular/forms';
 import {ComuneConfigService} from '../../../shared/map/comune-config.service';
 
-//import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-comune-config',

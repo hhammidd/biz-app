@@ -109,6 +109,9 @@ import { SalepointfilterComponent } from './salepointfilter/salepointfilter.comp
 import {SalepointfolterService} from "./salepointfilter/salepointfolter.service";
 import { SpmainsComponent } from './spmains/spmains.component';
 import {SpmainService} from "./spmains/shared/spmain.service";
+import {NgMultiSelectDropDownModule} from "ng-multiselect-dropdown";
+import { GeofilteringComponent } from './spmains/geofiltering/geofiltering.component';
+import { SpmaincontainerComponent } from './spmains/spmaincontainer/spmaincontainer.component';
 
 // import { ToastrModule } from 'ngx-toastr';
 
@@ -215,6 +218,8 @@ import {SpmainService} from "./spmains/shared/spmain.service";
     CountryappComponent,
     SalepointfilterComponent,
     SpmainsComponent,
+    GeofilteringComponent,
+    SpmaincontainerComponent,
   ],
   imports: [
     BrowserModule,
@@ -224,7 +229,8 @@ import {SpmainService} from "./spmains/shared/spmain.service";
     AppRoutingModule,
     BrowserAnimationsModule,
     // ToastrModule.forRoot(),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgMultiSelectDropDownModule.forRoot()
   ],
   providers: [SalePointService, OfferService, UserService,
     RoleService, PermissionService, ProductService,
@@ -239,7 +245,8 @@ import {SpmainService} from "./spmains/shared/spmain.service";
     BrandQuestionComponent, BrandAnswerComponent,
     ParameterQuestionComponent, ParameterAnswerComponent,
     NationComponent, RegionComponent, ProvinceComponent, ComuneComponent, CapComponent,
-    ComuneConfigComponent, BrandCalculationComponent, LogisticComponent, PriceInfoComponent, ZoneInfoComponent, CountryappComponent, SalepointfilterComponent, SpmainsComponent]
+    ComuneConfigComponent, BrandCalculationComponent, LogisticComponent, PriceInfoComponent, ZoneInfoComponent, CountryappComponent, SalepointfilterComponent, SpmainsComponent, GeofilteringComponent, SpmaincontainerComponent,
+    HomeComponent]
 })
 export class AppModule {
 }
