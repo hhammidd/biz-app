@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import {SpmainService} from '../shared/spmain.service';
-import {MatDialog, MatDialogConfig, MatTableDataSource} from "@angular/material";
-import {RegionsDto} from "../RegionsDto";
-import {IDropdownSettings} from "ng-multiselect-dropdown";
-import {ProvinceDto} from "../ProvinceDto";
-import {ComuneDto} from "../ComuneDto";
-import {FormControl, FormGroup} from "@angular/forms";
-import {SalePointsInfoTo} from "../SalePointsInfoTo";
-import {SalePointTo} from "../SalePointTo";
+import {MatDialog, MatDialogConfig} from '@angular/material';
+import {RegionsDto} from '../RegionsDto';
+import {IDropdownSettings} from 'ng-multiselect-dropdown';
+import {ProvinceDto} from '../ProvinceDto';
+import {ComuneDto} from '../ComuneDto';
+import {FormControl, FormGroup} from '@angular/forms';
+import {SalePointsInfoTo} from '../SalePointsInfoTo';
 
 @Component({
   selector: 'app-geofiltering',
@@ -19,6 +18,10 @@ export class GeofilteringComponent implements OnInit {
   constructor(private service: SpmainService, private dialog: MatDialog) {
   }
 
+  fields = [
+    { id: 1, value: 'Automation'},
+    { id: 2, value: 'Electrical vehicles'},
+    { id: 3, value: 'Farmacy'}];
 
   regionDropdownList: RegionsDto[] = [];
   regionSelectedItems = [];
@@ -32,8 +35,11 @@ export class GeofilteringComponent implements OnInit {
   comuneSelectedItems = [];
   comuneDropdownSettings: IDropdownSettings;
 
+  field: string;
+  market: string;
+
   public formGroup: FormGroup;
-  public loadContent: boolean = false;
+  public loadContent = false;
 
   salePointsInfoTo: SalePointsInfoTo;
 

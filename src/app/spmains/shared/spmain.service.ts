@@ -22,12 +22,6 @@ export class SpmainService {
 
   salePointTos: SalePointTo[];
 
-  // salePointTos: SalePointTo[] = [
-  //   {id: 1, fieldCode: 'EV', name: 'bla', geoId: 2, cap: '1', comune: 'ww',
-  //     province: 'wdw', country: 'adasd', tel: '23232', psw: 'wsw', username: 'qw', coords: 'wq'}
-  // ];
-
-  // private GeoCombineTo: null;
   private usersUrl: string;
   private geoUrl: string;
 

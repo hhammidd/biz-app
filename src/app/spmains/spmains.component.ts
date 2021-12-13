@@ -22,7 +22,10 @@ export class SpmainsComponent implements OnInit {
   constructor(private service: SpmainService, private dialog: MatDialog) {
   }
 
-
+  fields = [
+    { id: 1, value: 'Automation'},
+    { id: 2, value: 'Electrical vehicles'},
+    { id: 3, value: 'Farmacy'}];
 
   get f() {
     return this.formGroup.controls;
@@ -46,7 +49,6 @@ export class SpmainsComponent implements OnInit {
   salePointsInfoTo: SalePointsInfoTo;
   salePointTos: SalePointTo[];
 
-  // displayedColumns: string[] = ['name', 'province', 'comune', 'cap', 'tel', 'fieldCode'];
   displayedColumns: string[] = ['name', 'province', 'comune', 'cap', 'tel', 'fieldCode'];
 
   ngOnInit() {
