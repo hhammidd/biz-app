@@ -245,7 +245,8 @@ import { SpmaincontainerComponent } from './spmains/spmaincontainer/spmaincontai
     BrandQuestionComponent, BrandAnswerComponent,
     ParameterQuestionComponent, ParameterAnswerComponent,
     NationComponent, RegionComponent, ProvinceComponent, ComuneComponent, CapComponent,
-    ComuneConfigComponent, BrandCalculationComponent, LogisticComponent, PriceInfoComponent, ZoneInfoComponent, CountryappComponent, SalepointfilterComponent, SpmainsComponent, GeofilteringComponent, SpmaincontainerComponent]
+    ComuneConfigComponent, BrandCalculationComponent, LogisticComponent, PriceInfoComponent, ZoneInfoComponent, CountryappComponent, SalepointfilterComponent, SpmainsComponent, GeofilteringComponent, SpmaincontainerComponent,
+    HomeComponent]
 })
 export class AppModule {
 }

@@ -18,10 +18,15 @@ export class GeofilteringComponent implements OnInit {
   constructor(private service: SpmainService, private dialog: MatDialog) {
   }
 
-  fields = [
+  fields = [ //TODO connect db
     { id: 1, value: 'Automation'},
     { id: 2, value: 'Electrical vehicles'},
     { id: 3, value: 'Farmacy'}];
+
+  markets = [ //TODO
+    { id: 1, value: 'ITALY'},
+    { id: 2, value: 'NETHERLANDS'},
+    { id: 3, value: 'BELGIUM'}];
 
   regionDropdownList: RegionsDto[] = [];
   regionSelectedItems = [];
@@ -107,8 +112,8 @@ export class GeofilteringComponent implements OnInit {
       regions: new FormControl(this.regionDropdownList),
       provinces: new FormControl(this.provinceDropdownList),
       comunes: new FormControl(this.comuneDropdownList),
-      market: new FormControl('ITALY'), // Todo fill later
-      field: new FormControl('EV'), // Todo fill later
+      market: new FormControl(this.market), // Todo fill later
+      field: new FormControl(this.field), // Todo fill later
     });
     this.loadContent = true;
   }
