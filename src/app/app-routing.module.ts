@@ -35,6 +35,8 @@ import {ZoneinfosComponent} from './buyinghouse/zoneinfos/zoneinfos.component';
 import {CountryappComponent} from './countryapp/countryapp.component';
 import {SalepointfilterComponent} from './salepointfilter/salepointfilter.component';
 import {SpmaincontainerComponent} from "./spmains/spmaincontainer/spmaincontainer.component";
+import {HomegeoComponent} from "./homegeo/homegeo.component";
+import {SalepointdashboardmapComponent} from "./salepointdashboardmap/salepointdashboardmap.component";
 
 
 const routes: Routes = [
@@ -96,7 +98,14 @@ const routes: Routes = [
       {path: '**', redirectTo: '/usermanagement', pathMatch: 'full'}
     ]
   },
-  {path: 'home', component: HomeComponent},
+  {path: 'home', component: HomeComponent,
+    children: [
+      {path: 'homegeo', component: HomegeoComponent},
+      {path: 'sp', component: SpmaincontainerComponent},
+    ]
+  },
+  {path: 'homegeo', component: HomegeoComponent},
+  {path: 'salepointdashboardmap', component: SalepointdashboardmapComponent},
   {path: '404', component: NotFoundComponent},
   {path: '**', redirectTo: '/404'}
 ];
