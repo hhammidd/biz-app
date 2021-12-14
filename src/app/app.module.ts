@@ -124,6 +124,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { SalepointdashboardmapComponent } from './salepointdashboardmap/salepointdashboardmap.component';
+import { SalepointsolComponent } from './salepointsol/salepointsol.component';
 
 // import { ToastrModule } from 'ngx-toastr';
 
@@ -235,6 +236,7 @@ import { SalepointdashboardmapComponent } from './salepointdashboardmap/salepoin
     NavComponent,
     HomegeoComponent,
     SalepointdashboardmapComponent,
+    SalepointsolComponent,
   ],
   imports: [
     BrowserModule,
