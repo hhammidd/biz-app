@@ -22,8 +22,8 @@ export class NationListComponent implements OnInit {
   constructor(private service: NationService,
               private dialog: MatDialog) {
   }
-  @ViewChild(MatSort, {static: false}) sort: MatSort;
-  @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatPaginator) paginator: MatPaginator;
 
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 

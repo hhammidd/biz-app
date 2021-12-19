@@ -20,8 +20,8 @@ export class CapListComponent implements OnInit {
               private dialog: MatDialog) {
   }
 
-  @ViewChild(MatSort, {static: false}) sort: MatSort;
-  @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatPaginator) paginator: MatPaginator;
 
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
