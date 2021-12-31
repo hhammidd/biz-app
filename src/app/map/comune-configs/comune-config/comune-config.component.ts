@@ -13,21 +13,21 @@ export class ComuneConfigComponent implements OnInit {
   constructor(private service: ComuneConfigService) {
   }
 
-  ngOnInit() {
-    this.resetForm();
-  }
+  // ngOnInit() {
+  //   this.resetForm();
+  // }
 
-  resetForm(form?: NgForm) {
-    if (form != null) {
-      form.resetForm();
-    }
-    this.service.formData = {
-      comuneId: null,
-      comuneName: '',
-      comuneCode: '',
-      provinceId: 1
-    };
-  }
+  // resetForm(form?: NgForm) {
+  //   if (form != null) {
+  //     form.resetForm();
+  //   }
+  //   this.service.formData = {
+  //     comuneId: null,
+  //     comuneName: '',
+  //     comuneCode: '',
+  //     provinceId: 1
+  //   };
+  // }
 
   onSubmit(form: NgForm) {
     if (form.value.ComuneId == null)

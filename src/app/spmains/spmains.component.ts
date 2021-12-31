@@ -1,15 +1,14 @@
 import {Component, OnInit} from '@angular/core';
 import {SpmainService} from './shared/spmain.service';
-import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import {FormControl, FormGroup} from '@angular/forms';
 import {IDropdownSettings} from 'ng-multiselect-dropdown';
 import {RegionsDto} from './RegionsDto';
 import {ProvinceDto} from './ProvinceDto';
 import {ComuneDto} from './ComuneDto';
-import {SalePointsInfoTo} from "./SalePointsInfoTo";
-import {MatDialog, MatDialogConfig, MatTableDataSource} from "@angular/material";
-import {UserComponent} from "../users/user/user.component";
-import {GeofilteringComponent} from "./geofiltering/geofiltering.component";
-import {SalePointTo} from "./SalePointTo";
+import {SalePointsInfoTo} from './SalePointsInfoTo';
+import {MatDialog, MatDialogConfig} from '@angular/material';
+import {GeofilteringComponent} from './geofiltering/geofiltering.component';
+import {SalePointTo} from './SalePointTo';
 
 @Component({
   selector: 'app-spmains',
@@ -19,7 +18,7 @@ import {SalePointTo} from "./SalePointTo";
 export class SpmainsComponent implements OnInit {
 
 
-  constructor(private service: SpmainService, private dialog: MatDialog) {
+  constructor(public service: SpmainService, private dialog: MatDialog) {
   }
 
   fields = [
@@ -44,7 +43,7 @@ export class SpmainsComponent implements OnInit {
   comuneDropdownSettings: IDropdownSettings;
 
   public formGroup: FormGroup;
-  public loadContent: boolean = false;
+  public loadContent = false;
 
   salePointsInfoTo: SalePointsInfoTo;
   salePointTos: SalePointTo[];

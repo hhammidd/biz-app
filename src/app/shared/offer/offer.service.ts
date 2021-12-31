@@ -7,7 +7,7 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 export class OfferService {
 
   form: FormGroup = new FormGroup({
-    // $key: new FormControl(null),
+    // $key: new FcormControl(null),
     offer_id: new FormControl('0001', Validators.required),
     title: new FormControl('', Validators.email),
     desc: new FormControl('', [Validators.required, Validators.minLength(8)]),

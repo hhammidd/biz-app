@@ -15,24 +15,12 @@ import {SalePointComponent} from './sale-points/sale-point/sale-point.component'
 import {MaterialModule} from './material/material.module';
 import {SalePointService} from './shared/sale-point.service';
 
-import {OfferComponent} from './offers/offer/offer.component';
-import {OfferListComponent} from './offers/offer-list/offer-list.component';
-import {OffersComponent} from './offers/offers.component';
 import {OfferService} from './shared/offer/offer.service';
 
-import {UsersComponent} from './users/users.component';
-import {UserComponent} from './users/user/user.component';
-import {UserListComponent} from './users/user-list/user-list.component';
 import {UserService} from './shared/user/user.service';
-import {RolesComponent} from './roles/roles.component';
-import {RoleComponent} from './roles/role/role.component';
-import {RoleListComponent} from './roles/role-list/role-list.component';
 import {RoleService} from './shared/role/role.service';
-import {UsermanagementsComponent} from './usermanagements/usermanagements.component';
 
-import {PermissionsComponent} from './usermanagements/permissions/permissions.component';
-import {PermissionComponent} from './usermanagements/permissions/permission/permission.component';
-import {PermissionListComponent} from './usermanagements/permissions/permission-list/permission-list.component';
+
 import {PermissionService} from './shared/permission/permission.service';
 
 import {ProductsComponent} from './products/products.component';
@@ -62,24 +50,14 @@ import {BrandAnswerService} from './shared/studies/brand/brand-answer.service';
 import {ParameterQuestionService} from './shared/studies/parameter/parameter-question.service';
 import {ParameterAnswerService} from './shared/studies/parameter/parameter-answer.service';
 import {MapComponent} from './map/map.component';
-import {NationsComponent} from './map/nations/nations.component';
-import {NationComponent} from './map/nations/nation/nation.component';
-import {NationListComponent} from './map/nations/nation-list/nation-list.component';
+
 import {NationService} from './shared/map/nation.service';
-import {RegionsComponent} from './map/regions/regions.component';
-import {RegionComponent} from './map/regions/region/region.component';
-import {RegionListComponent} from './map/regions/region-list/region-list.component';
+
 import {RegionService} from './shared/map/region.service';
-import {ProvincesComponent} from './map/provinces/provinces.component';
-import {ProvinceComponent} from './map/provinces/province/province.component';
-import {ProvinceListComponent} from './map/provinces/province-list/province-list.component';
 import {ProvinceService} from './shared/map/province.service';
 import {ComuniComponent} from './map/comuni/comuni.component';
 import {ComuneComponent} from './map/comuni/comune/comune.component';
 import {ComuneListComponent} from './map/comuni/comune-list/comune-list.component';
-import {CapsComponent} from './map/caps/caps.component';
-import {CapComponent} from './map/caps/cap/cap.component';
-import {CapListComponent} from './map/caps/cap-list/cap-list.component';
 import {ComuneService} from './shared/map/comune.service';
 import {CapService} from './shared/map/cap.service';
 import {BrandMicrosComponent} from './studies/brands/brand-micros/brand-micros.component';
@@ -92,10 +70,6 @@ import {ComuneConfigListComponent} from './map/comune-configs/comune-config-list
 import {BrandCalculationsComponent} from './studies/brands/brand-calculations/brand-calculations.component';
 import {BrandCalculationsService} from './shared/studies/brand/brand-calculations.service';
 import {BrandCalculationComponent} from './studies/brands/brand-calculations/brand-calculation/brand-calculation.component';
-import {DistributionComponent} from './distribution/distribution.component';
-import {LogisticsComponent} from './distribution/logistics/logistics.component';
-import {LogisticComponent} from './distribution/logistics/logistic/logistic.component';
-import {LogisticListComponent} from './distribution/logistics/logistic-list/logistic-list.component';
 import {BuyinghouseComponent} from './buyinghouse/buyinghouse.component';
 import {PriceinfosComponent} from './buyinghouse/priceinfos/priceinfos.component';
 import {PriceInfoComponent} from './buyinghouse/priceinfos/price-info/price-info.component';
@@ -106,10 +80,10 @@ import {ZoneInfoComponent} from './buyinghouse/zoneinfos/zone-info/zone-info.com
 import {ZoneInfoListComponent} from './buyinghouse/zoneinfos/zone-info-list/zone-info-list.component';
 import { CountryappComponent } from './countryapp/countryapp.component';
 import { SalepointfilterComponent } from './salepointfilter/salepointfilter.component';
-import {SalepointfolterService} from "./salepointfilter/salepointfolter.service";
+import {SalepointfolterService} from './salepointfilter/salepointfolter.service';
 import { SpmainsComponent } from './spmains/spmains.component';
-import {SpmainService} from "./spmains/shared/spmain.service";
-import {NgMultiSelectDropDownModule} from "ng-multiselect-dropdown";
+import {SpmainService} from './spmains/shared/spmain.service';
+import {NgMultiSelectDropDownModule} from 'ng-multiselect-dropdown';
 import { GeofilteringComponent } from './spmains/geofiltering/geofiltering.component';
 import { SpmaincontainerComponent } from './spmains/spmaincontainer/spmaincontainer.component';
 import { NavComponent } from './nav/nav.component';
@@ -139,20 +113,6 @@ import { SalepointsolComponent } from './salepointsol/salepointsol.component';
     SalePointsComponent,
     SalePointListComponent,
     SalePointComponent,
-    OfferComponent,
-    OfferListComponent,
-    OffersComponent,
-    UsersComponent,
-    UserComponent,
-    UserListComponent,
-    RolesComponent,
-    RoleComponent,
-    RoleListComponent,
-    UsermanagementsComponent,
-
-    PermissionsComponent,
-    PermissionComponent,
-    PermissionListComponent,
 
     ProductsComponent,
     ProductComponent,
@@ -187,21 +147,10 @@ import { SalepointsolComponent } from './salepointsol/salepointsol.component';
 
     // Map components
     MapComponent,
-    NationsComponent,
-    NationComponent,
-    NationListComponent,
-    RegionsComponent,
-    RegionComponent,
-    RegionListComponent,
-    ProvincesComponent,
-    ProvinceComponent,
-    ProvinceListComponent,
     ComuniComponent,
     ComuneComponent,
     ComuneListComponent,
-    CapsComponent,
-    CapComponent,
-    CapListComponent,
+
     BrandMicrosComponent,
     BrandMicroComponent,
     BrandMicroListComponent,
@@ -214,11 +163,7 @@ import { SalepointsolComponent } from './salepointsol/salepointsol.component';
     BrandCalculationsComponent,
     BrandCalculationComponent,
 
-    // Distribution
-    DistributionComponent,
-    LogisticsComponent,
-    LogisticComponent,
-    LogisticListComponent,
+
 
     // Buy house
     BuyinghouseComponent,
@@ -266,12 +211,10 @@ import { SalepointsolComponent } from './salepointsol/salepointsol.component';
     BrandCalculationsService, PriceInfoService, SalepointfolterService, SpmainService],
 
   bootstrap: [AppComponent],
-  entryComponents: [SalePointComponent, OfferComponent, UserComponent,
-    RoleComponent, PermissionComponent, ProductComponent,
+  entryComponents: [SalePointComponent, ProductComponent,
     BrandQuestionComponent, BrandAnswerComponent,
-    ParameterQuestionComponent, ParameterAnswerComponent,
-    NationComponent, RegionComponent, ProvinceComponent, ComuneComponent, CapComponent,
-    ComuneConfigComponent, BrandCalculationComponent, LogisticComponent, PriceInfoComponent, ZoneInfoComponent, CountryappComponent, SalepointfilterComponent, SpmainsComponent, GeofilteringComponent, SpmaincontainerComponent,
+    ParameterQuestionComponent, ParameterAnswerComponent, ComuneComponent,
+    ComuneConfigComponent, BrandCalculationComponent, PriceInfoComponent, ZoneInfoComponent, CountryappComponent, SalepointfilterComponent, SpmainsComponent, GeofilteringComponent, SpmaincontainerComponent,
     HomeComponent]
 })
 export class AppModule {

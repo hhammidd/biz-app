@@ -49,28 +49,28 @@ export class PriceInfoComponent implements OnInit {
     this.resetForm();
   }
 
-  resetForm(form?: NgForm) {
-    if (form != null) {
-      form.resetForm();
-    }
-    this.service.formData = {
-      id: null,
-      address: '',
-      cityPostalcode: '',
-      postalcode: '',
-      city: '',
-      daysOnMarket: 0,
-      dateInMarket: '',
-      energy: '',
-      floor: 0,
-      homeType: '',
-      livingAreaMeter: 0,
-      meter: 0,
-      price: 0,
-      pricePermeter: 0,
-      constructionYear: 0
-    };
-  }
+  // resetForm(form?: NgForm) {
+  //   if (form != null) {
+  //     form.resetForm();
+  //   }
+  //   this.service.formData = {
+  //     id: null,
+  //     address: '',
+  //     cityPostalcode: '',
+  //     postalcode: '',
+  //     city: '',
+  //     daysOnMarket: 0,
+  //     dateInMarket: '',
+  //     energy: '',
+  //     floor: 0,
+  //     homeType: '',
+  //     livingAreaMeter: 0,
+  //     meter: 0,
+  //     price: 0,
+  //     pricePermeter: 0,
+  //     constructionYear: 0
+  //   };
+  // }
 
   onSubmit(form: NgForm) {
     if (form.value.ComuneId == null) {

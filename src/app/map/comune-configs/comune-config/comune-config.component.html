@@ -1,21 +1,21 @@
-<form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
-  <input type="hidden" name="comuneId" #comuneId="ngModel" [(ngModel)]="service.formData.comuneId">
-  <div class="form-group">
-    <label>Comune Name </label>
-    <input name="comuneName" #comuneName="ngModel" [(ngModel)]="service.formData.comuneName" class="form-control" required>
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label>Code comune</label>
-      <input name="comuneCode" #comuneCode="ngModel" [(ngModel)]="service.formData.comuneCode" class="form-control">
-    </div>
-    <div class="form-group  col-md-6">
-      <label>Code Father</label>
-      <input name="provinceId" #provinceId="ngModel" [(ngModel)]="service.formData.provinceId" class="form-control">
-    </div>
+<!--<form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">-->
+  <!--<input type="hidden" name="comuneId" #comuneId="ngModel" [(ngModel)]="service.formData.comuneId">-->
+  <!--<div class="form-group">-->
+    <!--<label>Comune Name </label>-->
+    <!--<input name="comuneName" #comuneName="ngModel" [(ngModel)]="service.formData.comuneName" class="form-control" required>-->
+  <!--</div>-->
+  <!--<div class="form-row">-->
+    <!--<div class="form-group col-md-6">-->
+      <!--<label>Code comune</label>-->
+      <!--<input name="comuneCode" #comuneCode="ngModel" [(ngModel)]="service.formData.comuneCode" class="form-control">-->
+    <!--</div>-->
+    <!--<div class="form-group  col-md-6">-->
+      <!--<label>Code Father</label>-->
+      <!--<input name="provinceId" #provinceId="ngModel" [(ngModel)]="service.formData.provinceId" class="form-control">-->
+    <!--</div>-->
 
-  </div>
-  <div class="form-group">
-    <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block">SUBMIT</button>
-  </div>
-</form>
+  <!--</div>-->
+  <!--<div class="form-group">-->
+    <!--<button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block">SUBMIT</button>-->
+  <!--</div>-->
+<!--</form>-->
